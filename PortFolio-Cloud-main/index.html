@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css" />
+  <title>Reza Safari</title>
+  <meta name="description" content="Reza Safari - Cloud Computing Technology Graduate & Aspiring Cloud Engineer" />
+</head>
+
+<body>
+  <header class="main-header">
+    <div class="main-header__logo-container">
+      <div class="main-header__logo-img-cont">
+        <img
+          src="./assets/reza.png"
+          alt="Reza Safari" class="main-header__logo-img" />
+      </div>
+      <h4 class="main-header__logo-text">Reza Safari</h4>
+    </div>
+    <nav class="main-header__navigation">
+      <ul class="main-header__navigation-links">
+        <li class="main-header__navigation-link"><a href="./index.html"> Home </a></li>
+        <li class="main-header__navigation-link"><a href="./index.html#about"> About </a></li>
+        <li class="main-header__navigation-link"><a href="./index.html#resume"> Resume </a></li>
+        <li class="main-header__navigation-link">
+          <a href="./index.html#projects"> Work Samples </a>
+        </li>
+        <li class="main-header__navigation-link"><a href="./index.html#education"> Education </a></li>
+        <li class="main-header__navigation-link"><a href="./index.html#contact"> Contact </a></li>
+      </ul>
+    </nav>
+    <div class="main-header__sm-scr-nav-btn">
+      <div class="main-header__sm-scr-nav-btn-line"></div>
+      <div class="main-header__sm-scr-nav-btn-line"></div>
+    </div>
+    <div class="main-header__sm-menu">
+      <div class="main-header__sm-menu-close">
+
+      </div>
+      <ul class="main-header__sm-menu-links">
+        <li>
+          <a class="main-header__sm-menu-link main-header__sm-menu-link--1" name="home-hero">Home</a>
+        </li>
+        <li>
+          <a class="main-header__sm-menu-link main-header__sm-menu-link--2" name="about">About</a>
+        </li>
+        <li>
+          <a class="main-header__sm-menu-link main-header__sm-menu-link--3" name="resume">Resume</a>
+        </li>
+        <li>
+          <a class="main-header__sm-menu-link main-header__sm-menu-link--4" name="projects">Work Samples</a>
+        </li>
+        <li>
+          <a class="main-header__sm-menu-link main-header__sm-menu-link--5" name="education">Education</a>
+        </li>
+        <li>
+          <a class="main-header__sm-menu-link main-header__sm-menu-link--6" name="contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!--Remove or Comment out this theme selector code when you are done with choosing the right color for your theme so this color selector don't appear when you host the site online-->
+  <div class="themeClrSelector">
+    <input placeholder="Color Selector" type="color" value="#1DA1F2" class="themeClrSelector__input" />
+    <img alt="theme color tester" src="https://img.icons8.com/fluent/48/000000/rgb-circle-1.png"
+      class="themeClrSelector__img" />
+  </div>
+  <!---->
+
+  <section id="home-hero" class="home-hero">
+    <div class="home-hero__content">
+      <div class="home-hero__info">
+        <h1 class="heading-primary home-hero__heading-primary">
+          <span class="heading-primary__sm"> Hello 👋</span>
+          <span class="heading-primary__main">
+            I'm Shirin Javan — a Cloud Computing Technology Expert specializing in Microsoft Azure, Microsoft 365, and hybrid cloud environments.
+          </span>
+        </h1>
+        <button class="btn btn-theme home-hero__btn-theme" onclick="scrollToSection('projects')">Work Samples</button>
+        <button class="btn btn-inv home-hero__btn-theme" onclick="scrollToSection('contact')">Contact</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about main-section">
+    <div class="main-container">
+      <h2 class="heading-secondary projects__heading-secondary">
+        <span class="heading-secondary__sm"> About Me 🦄</span>
+        <span class="heading-secondary__main">
+          Here you will find more information about me, my background, and my current skills in cloud computing and system administration
+        </span>
+      </h2>
+      <div class="main-section__content">
+        <div class="about__info">
+          <div class="about__main-info">
+            <h3 class="heading-quaternary about__heading-quaternary">
+              My Story
+            </h3>
+            <p class="text-primary about__text-primary">
+              <span>
+                I am a dedicated Cloud Computing Technology graduate from George Brown College with a strong foundation in software engineering. Currently pursuing opportunities in cloud engineering, I bring a unique combination of technical expertise and customer service experience that enables me to deliver effective solutions in real-world environments.
+              </span>
+              <span>
+                My journey began with a Bachelor's degree in Computer Engineering, and I've since specialized in cloud technologies, particularly Microsoft Azure and Microsoft 365 environments. Through hands-on projects and lab exercises, I've developed strong analytical, communication, and troubleshooting skills that are essential for modern cloud infrastructure management.
+              </span>
+              <span>
+                I have practical experience in system administration across both Linux and Windows environments, with a focus on creating scalable, secure, and resilient hybrid cloud setups. My certifications in Microsoft 365 Fundamentals and Azure Fundamentals demonstrate my commitment to staying current with cloud technologies and best practices.
+              </span>
+            </p>
+            <button class="btn btn-theme about__btn-theme" onclick="scrollToSection('projects')">View Work Samples</button>
+          </div>
+          <div class="about__skill-info">
+            <h3 class="heading-quaternary about__heading-quaternary">
+              Core Skills & Technologies
+            </h3>
+            <ul class="about__skills">
+              <li class="about__skill">Microsoft Azure</li>
+              <li class="about__skill">Microsoft 365</li>
+              <li class="about__skill">PowerShell</li>
+              <li class="about__skill">Windows Server</li>
+              <li class="about__skill">Linux Administration</li>
+              <li class="about__skill">DNS Configuration</li>
+              <li class="about__skill">Active Directory</li>
+              <li class="about__skill">System Administration</li>
+              <li class="about__skill">Cloud Security</li>
+              <li class="about__skill">Network Infrastructure</li>
+              <li class="about__skill">ServiceNow</li>
+              <li class="about__skill">Technical Support</li>
+              <li class="about__skill">Hybrid Cloud Solutions</li>
+              <li class="about__skill">IT Service Management</li>
+              <li class="about__skill">Customer Service</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="skills-showcase">
+    <ul class="skills-showcase__list">
+      <li class="skills-showcase__list-item">
+        <i class="devicon-azure-plain"></i>
+      </li>
+      <li class="skills-showcase__list-item">
+        <i class="devicon-windows8-original"></i>
+      </li>
+      <li class="skills-showcase__list-item">
+        <i class="devicon-linux-plain"></i>
+      </li>
+      <li class="skills-showcase__list-item">
+        <i class="devicon-powershell-plain"></i>
+      </li>
+      <li class="skills-showcase__list-item">
+        <i class="devicon-microsoftsqlserver-plain"></i>
+      </li>
+      <li class="skills-showcase__list-item">
+        <i class="devicon-git-plain"></i>
+      </li>
+      <li class="skills-showcase__list-item">
+        <i class="devicon-github-original"></i>
+      </li>
+      <li class="skills-showcase__list-item">
+        <i class="devicon-vscode-plain"></i>
+      </li>
+      <li class="skills-showcase__list-item">
+        <i class="devicon-amazonwebservices-original"></i>
+      </li>
+    </ul>
+  </section>
+
+  <!-- NEW RESUME SECTION -->
+  <section id="resume" class="resume main-section">
+    <div class="main-container">
+      <h2 class="heading-secondary">
+        <span class="heading-secondary__sm"> Resume 📄</span>
+        <span class="heading-secondary__main">
+          Download my complete resume with detailed experience and qualifications
+        </span>
+      </h2>
+      <div class="main-section__content">
+        <div class="resume__content">
+          <div class="resume__preview">
+            <div class="resume__preview-box">
+              <div class="resume__preview-icon">
+                <i class="devicon-github-original" style="font-size: 4rem; color: rgba(var(--themeColor), 1);"></i>
+              </div>
+              <h3 class="heading-tertiary">Professional Resume</h3>
+              <p class="text-primary">
+                <span>
+                  My comprehensive resume includes detailed work experience, technical skills, certifications, and project accomplishments in cloud computing and system administration.
+                </span>
+                <span>
+                  Updated with latest Microsoft Azure and Microsoft 365 certifications, hands-on project experience, and professional development achievements.
+                </span>
+              </p>
+              <div class="resume__buttons">
+                <button class="btn btn-theme" onclick="window.open('https://drive.google.com/file/d/1EbxPw8KW7UasksMBem_pUniZUTXEs-BD/view?usp=drive_link', '_blank')">Download PDF</button>
+                <button class="btn btn-inv" onclick="window.open('https://drive.google.com/file/d/1EbxPw8KW7UasksMBem_pUniZUTXEs-BD/view?usp=drive_link', '_blank')">View Online</button>
+              </div>
+            </div>
+          </div>
+          <div class="resume__highlights">
+            <h3 class="heading-quaternary">Resume Highlights</h3>
+            <ul class="resume__highlights-list">
+              <li class="resume__highlight-item">
+                <strong>Education:</strong> Cloud Computing Technology Graduate - George Brown College
+              </li>
+              <li class="resume__highlight-item">
+                <strong>Certifications:</strong> Microsoft 365 Fundamentals (MS-900), Azure Fundamentals (AZ-900)
+              </li>
+              <li class="resume__highlight-item">
+                <strong>Experience:</strong> System Administration, Cloud Infrastructure, Technical Support
+              </li>
+              <li class="resume__highlight-item">
+                <strong>Specialization:</strong> Hybrid Cloud Solutions, Microsoft Technologies, IT Service Management
+              </li>
+              <li class="resume__highlight-item">
+                <strong>Languages:</strong> PowerShell, Bash, SQL, Python (Basic)
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects main-section">
+    <div class="main-container">
+      <h2 class="heading-secondary projects__heading-secondary">
+        <span class="heading-secondary__sm"> Work Samples 🛠️</span>
+        <span class="heading-secondary__main">
+          Here are some of the key projects and implementations I've completed during my cloud computing studies
+        </span>
+      </h2>
+      <div class="main-section__content">
+        <div class="projects__list">
+          <div class="projects__list-item">
+            <div class="projects__list-item-count">
+              <span class="projects__list-item-count-num"> 1 </span>
+              <span class="projects__list-item-count-line"> </span>
+              <span class="projects__list-item-count-end-dot"> </span>
+            </div>
+            <div class="projects__list-item-details">
+              <div class="projects__list-item-img-cont">
+                <img src="./assets/MS365.jpg" alt="Microsoft 365 Implementation" class="projects__list-item-img" />
+              </div>
+              <h3 class="heading-tertiary projects__list-item-heading-tertiary">
+                Microsoft 365 Environment Implementation
+              </h3>
+
+              <p class="text-primary projects__list-item-text-primary">
+                <span>
+                  <strong>Technologies Used:</strong> Microsoft 365 Admin Center, Azure Active Directory, Exchange Online, SharePoint, Teams, PowerShell
+                </span>
+                <span>
+                  Implemented and managed a comprehensive Microsoft 365 environment for a mid-size organization, ensuring scalability, flexibility, resilience, and security. This project involved configuring user accounts, security policies, and collaboration tools.
+                </span>
+                <span>
+                  <strong>Key Achievements:</strong> Successfully set up secure access controls, implemented backup strategies, configured multi-factor authentication, and ensured compliance with organizational security requirements through the Microsoft 365 Admin Center.
+                </span>
+              </p>
+              <div class="projects__buttons">
+                <button class="btn btn-theme projects__btn-theme" onclick="window.open('https://github.com/shirinjavan/microsoft365-implementation', '_blank')">
+                  View on GitHub
+                </button>
+                <button class="btn btn-inv projects__btn-inv" onclick="window.open('https://learn.microsoft.com/en-us/microsoft-365/?view=o365-worldwide', '_blank')">Documentation</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="projects__list-item projects__list-item--inv">
+            <div class="projects__list-item-details">
+              <div class="projects__list-item-img-cont">
+                <img src="./assets/ARM.png" alt="Azure Cloud Management" class="projects__list-item-img" />
+              </div>
+              <h3 class="heading-tertiary projects__list-item-heading-tertiary">
+                Azure Cloud Resource Management
+              </h3>
+
+              <p class="text-primary projects__list-item-text-primary">
+                <span>
+                  <strong>Technologies Used:</strong> Microsoft Azure Portal, Azure CLI, PowerShell, Virtual Machines, Storage Accounts, Virtual Networks, Azure Monitor
+                </span>
+                <span>
+                  Gained hands-on experience working in Microsoft Azure Portal, including managing resources, monitoring services, and understanding core cloud concepts. This project focused on implementing best practices for resource management and cost optimization.
+                </span>
+                <span>
+                  <strong>Skills Developed:</strong> Virtual machine deployment, storage management, networking configuration, security implementation, and cost management within Azure environments.
+                </span>
+              </p>
+              <div class="projects__buttons">
+                <button class="btn btn-theme projects__btn-theme" onclick="window.open('https://github.com/shirinjavan/azure-resource-management', '_blank')">
+                  View on GitHub
+                </button>
+                <button class="btn btn-inv projects__btn-inv" onclick="window.open('https://portal.azure.com', '_blank')">Azure Portal</button>
+              </div>
+            </div>
+            <div class="projects__list-item-count">
+              <span class="projects__list-item-count-num"> 2 </span>
+              <span class="projects__list-item-count-line"> </span>
+              <span class="projects__list-item-count-end-dot"> </span>
+            </div>
+          </div>
+
+          <div class="projects__list-item">
+            <div class="projects__list-item-count">
+              <span class="projects__list-item-count-num"> 3 </span>
+              <span class="projects__list-item-count-line"> </span>
+              <span class="projects__list-item-count-end-dot"> </span>
+            </div>
+            <div class="projects__list-item-details">
+              <div class="projects__list-item-img-cont">
+                <img src="./assets/Hybrid.jpg" alt="Hybrid Cloud Infrastructure" class="projects__list-item-img" />
+              </div>
+              <h3 class="heading-tertiary projects__list-item-heading-tertiary">
+                Hybrid Cloud Infrastructure Design
+              </h3>
+
+              <p class="text-primary projects__list-item-text-primary">
+                <span>
+                  <strong>Technologies Used:</strong> Windows Server, Linux (Ubuntu/CentOS), Active Directory, DNS, VPN, Azure Hybrid Services, PowerShell, Bash Scripting
+                </span>
+                <span>
+                  Designed and implemented hybrid cloud solutions combining on-premises Windows and Linux systems with cloud services. This project emphasized scalability, security, and resilience across different operating environments.
+                </span>
+                <span>
+                  <strong>Implementation Focus:</strong> Network integration, domain management, DNS configuration, and ensuring seamless connectivity between on-premises and cloud resources while maintaining security best practices and disaster recovery capabilities.
+                </span>
+              </p>
+              <div class="projects__buttons">
+                <button class="btn btn-theme projects__btn-theme" onclick="window.open('https://github.com/shirinjavan/hybrid-cloud-infrastructure', '_blank')">
+                  View on GitHub
+                </button>
+                <button class="btn btn-inv projects__btn-inv" onclick="window.open('https://aws.amazon.com/what-is/hybrid-cloud/', '_blank')">Architecture</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="projects__list-item projects__list-item--inv">
+            <div class="projects__list-item-details">
+              <div class="projects__list-item-img-cont">
+                <img src="./assets/it-service-management.jpg" alt="IT Service Management" class="projects__list-item-img" />
+              </div>
+              <h3 class="heading-tertiary projects__list-item-heading-tertiary">
+                IT Service Management & Support System
+              </h3>
+
+              <p class="text-primary projects__list-item-text-primary">
+                <span>
+                  <strong>Technologies Used:</strong> ServiceNow, Zendesk, Active Directory, Microsoft 365 Admin Center, PowerShell, Remote Desktop Tools
+                </span>
+                <span>
+                  Provided comprehensive first-level technical support using ticketing systems like ServiceNow and Zendesk, managing hardware, software, and network issues while maintaining detailed documentation and user communication.
+                </span>
+                <span>
+                  <strong>Specialization Areas:</strong> Microsoft 365 and Active Directory account management, password resets, access control implementation, user training on best practices, and incident resolution with focus on reducing repeat occurrences.
+                </span>
+              </p>
+              <div class="projects__buttons">
+                <button class="btn btn-theme projects__btn-theme" onclick="window.open('https://github.com/shirinjavan/itsm-support-system', '_blank')">
+                  Case Studies
+                </button>
+                <button class="btn btn-inv projects__btn-inv" onclick="window.open('#', '_blank')">Support Metrics</button>
+              </div>
+            </div>
+            <div class="projects__list-item-count">
+              <span class="projects__list-item-count-num"> 4 </span>
+              <span class="projects__list-item-count-line"> </span>
+              <span class="projects__list-item-count-end-dot"> </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW EDUCATION & ACKNOWLEDGEMENTS SECTION -->
+  <section id="education" class="education main-section">
+    <div class="main-container">
+      <h2 class="heading-secondary">
+        <span class="heading-secondary__sm"> Education & Acknowledgements 🎓</span>
+        <span class="heading-secondary__main">
+          My academic background, professional certifications, and achievements in cloud computing and technology
+        </span>
+      </h2>
+      <div class="main-section__content">
+        <div class="education__content">
+          <div class="education__academic">
+            <h3 class="heading-tertiary education__heading">Academic Education</h3>
+            <div class="education__item">
+              <div class="education__item-header">
+                <h4 class="education__degree">Cloud Computing Technology Program</h4>
+                <span class="education__year">2024-2025</span>
+              </div>
+              <p class="education__institution">George Brown College, Toronto, ON</p>
+              <p class="education__description">
+                Specialized program focusing on Microsoft Azure, Microsoft 365, hybrid cloud environments, system administration, and IT service management. Coursework included hands-on labs, real-world projects, and industry best practices.
+              </p>
+              <ul class="education__coursework">
+                <li>Cloud Infrastructure Design and Implementation</li>
+                <li>Microsoft Azure Administration</li>
+                <li>Microsoft 365 Environment Management</li>
+                <li>System Administration (Windows/Linux)</li>
+                <li>Network Infrastructure and Security</li>
+                <li>IT Service Management and Support</li>
+              </ul>
+            </div>
+            
+            <div class="education__item">
+              <div class="education__item-header">
+                <h4 class="education__degree">Bachelor of Computer Engineering</h4>
+                <span class="education__year">Completed</span>
+              </div>
+              <p class="education__institution">Previous Institution</p>
+              <p class="education__description">
+                Comprehensive foundation in computer systems, software engineering principles, and technical problem-solving that provided the groundwork for specializing in cloud computing technologies.
+              </p>
+            </div>
+          </div>
+
+          <div class="education__certifications">
+            <h3 class="heading-tertiary education__heading">Professional Certifications</h3>
+            <div class="certifications__grid">
+              <div class="certification__item">
+                <div class="certification__badge">
+                  <img src="https://images.credly.com/size/110x110/images/0c6d9839-f468-4adc-987d-5cfae4a9ee67/image.png" alt="MS-900 Badge" class="certification__badge-img">
+                </div>
+                <div class="certification__details">
+                  <h4 class="certification__title">Microsoft 365 Fundamentals</h4>
+                  <p class="certification__code">MS-900</p>
+                  <p class="certification__issuer">Microsoft</p>
+                  <span class="certification__status">Certified</span>
+                </div>
+              </div>
+
+              <div class="certification__item">
+                <div class="certification__badge">
+                  <img src="https://images.credly.com/size/110x110/images/be8fcaeb-c769-4858-b567-ffaaa73ce8cf/image.png" alt="AZ-900 Badge" class="certification__badge-img">
+                </div>
+                <div class="certification__details">
+                  <h4 class="certification__title">Microsoft Azure Fundamentals</h4>
+                  <p class="certification__code">AZ-900</p>
+                  <p class="certification__issuer">Microsoft</p>
+                  <span class="certification__status">Certified</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="education__achievements">
+            <h3 class="heading-tertiary education__heading">Additional Achievements</h3>
+            <div class="achievements__list">
+              <div class="achievement__item">
+                <div class="achievement__icon">🏆</div>
+                <div class="achievement__content">
+                  <h4 class="achievement__title">Academic Excellence</h4>
+                  <p class="achievement__description">Maintained high academic standing throughout Cloud Computing Technology program with focus on practical application and real-world problem solving.</p>
+                </div>
+              </div>
+
+              <div class="achievement__item">
+                <div class="achievement__icon">💼</div>
+                <div class="achievement__content">
+                  <h4 class="achievement__title">Professional Development</h4>
+                  <p class="achievement__description">Continuous learning in cloud technologies, attending Microsoft virtual events, and staying current with industry trends and best practices.</p>
+                </div>
+              </div>
+
+              <div class="achievement__item">
+                <div class="achievement__icon">🔧</div>
+                <div class="achievement__content">
+                  <h4 class="achievement__title">Hands-On Experience</h4>
+                  <p class="achievement__description">Completed extensive lab work and practical projects demonstrating real-world application of cloud computing concepts and system administration skills.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="education__documents">
+            <h3 class="heading-tertiary education__heading">Official Documents</h3>
+            <div class="documents__grid">
+              <div class="document__item" onclick="window.open('https://drive.google.com/file/d/1JOJzgRjtoF48Njhhu90n0xtDUrr-x5dh/view?usp=drive_link', '_blank')">
+                <div class="document__icon">📜</div>
+                <div class="document__info">
+                  <h4 class="document__title">Official Transcript</h4>
+                  <p class="document__description">George Brown College</p>
+                </div>
+              </div>
+
+              <div class="document__item" onclick="window.open('#', '_blank')">
+                <div class="document__icon">🎓</div>
+                <div class="document__info">
+                  <h4 class="document__title">Diploma Certificate</h4>
+                  <p class="document__description">Cloud Computing Technology</p>
+                </div>
+              </div>
+
+              <div class="document__item" onclick="window.open('#', '_blank')">
+                <div class="document__icon">🏅</div>
+                <div class="document__info">
+                  <h4 class="document__title">Microsoft Certifications</h4>
+                  <p class="document__description">MS-900 & AZ-900 Certificates</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact main-section">
+    <div class="main-container">
+      <h2 class="heading-secondary">
+        <span class="heading-secondary__sm"> Contact 📞</span>
+        <span class="heading-secondary__main">
+          Feel free to contact me for cloud engineering opportunities or collaboration
+        </span>
+      </h2>
+      <div class="main-section__content">
+        <div class="contact__form-cont">
+          <form class="contact__form">
+            <div class="contact__form-field">
+              <label for="name" class="contact__form-field-label">Name</label>
+              <input placeholder="Enter Your Name" type="text" class="contact__form-field-input" />
+            </div>
+            <div class="contact__form-field">
+              <label for="email" class="contact__form-field-label">Email</label>
+              <input placeholder="Enter Your Email" type="email" class="contact__form-field-input" />
+            </div>
+            <div class="contact__form-field">
+              <label for="message" class="contact__form-field-label">Message</label>
+              <textarea placeholder="Enter Your Message" name="message" id="message" cols="30" rows="10"
+                class="contact__form-field-input"></textarea>
+            </div>
+            <button type="submit" class="contact__form-submit">Submit</button>
+          </form>
+          <div class="contact__form-visual">
+            <div style="padding: 20px; background: #f8f9fa; border-radius: 8px; margin-top: 20px;">
+              <h4 style="margin-bottom: 15px; color: #333;">Get in Touch</h4>
+              <p style="margin-bottom: 10px;"><strong>Email:</strong> Shirin.javan@georgebrown.ca</p>
+              <p style="margin-bottom: 10px;"><strong>Phone:</strong> (647) 633-0330</p>
+              <p style="margin-bottom: 10px;"><strong>Location:</strong> Toronto, ON</p>
+              <p style="margin-bottom: 15px;"><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/shirinjavan-it" target="_blank">linkedin.com/in/shirinjavan-it</a></p>
+              <p style="margin-bottom: 15px;"><strong>GitHub:</strong> <a href="https://github.com/shirinjavan" target="_blank">github.com/shirinjavan</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <div class="main-footer__upper">
+      <div class="main-container">
+        <ul  class="main-footer__links">
+          <li class="main-footer__link">
+            <a href="./index.html">Home</a>
+          </li>
+          <li class="main-footer__link">
+            <a href="./index.html#about">About</a>
+          </li>
+          <li class="main-footer__link">
+            <a href="./index.html#resume">Resume</a>
+          </li>
+          <li class="main-footer__link">
+            <a href="./index.html#projects">Work Samples</a>
+          </li>
+          <li class="main-footer__link">
+            <a href="./index.html#education">Education</a>
+          </li>
+          <li class="main-footer__link">
+            <a href="./index.html#contact">Contact</a>
+          </li>
+        </ul>
+        <div class="main-footer__mid-line"></div>
+        <div class="main-footer__socials">
+          <a href="https://github.com/shirinjavan" class="main-footer__social-link">
+            <img
+              src="https://d33wubrfki0l68.cloudfront.net/5557d5a11584d7201a38ee1a95200f57a4cc0f88/15085/assets/png/github-ico.png"
+              alt="GitHub" class="main-footer__social-link-icon" />
+          </a>
+          <a href="https://www.linkedin.com/in/shirinjavan-it" class="main-footer__social-link">
+            <img
+              src="https://d33wubrfki0l68.cloudfront.net/7f29579dde49e02480372aa49f7189c5536b0118/34b92/assets/png/linkedin-ico.png"
+              alt="LinkedIn" class="main-footer__social-link-icon" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="main-footer__bottom">
+      <div class="main-container">
+        <p class="main-footer__bottom-txt">
+          <a target="_blank" href="https://github.com/rammcodes/wowfolio">WowFolio</a> Open-Source Template
+          <script>document.write(new Date().getFullYear())</script>. Made by
+          <a target="_blank" href="https://rammaheshwari.com">Ram Maheshwari</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Enhanced JavaScript with new functionality
+    const smMenuBtn = document.querySelector('.main-header__sm-scr-nav-btn')
+    const smMenu = document.querySelector('.main-header__sm-menu')
+    const smMenuCloseBtn = document.querySelector('.main-header__sm-menu-close')
+
+    const smMenuLinks = document.querySelectorAll('.main-header__sm-menu-link')
+    const smMenuLink1 = document.querySelector('.main-header__sm-menu-link--1')
+    const smMenuLink2 = document.querySelector('.main-header__sm-menu-link--2')
+    const smMenuLink3 = document.querySelector('.main-header__sm-menu-link--3')
+    const smMenuLink4 = document.querySelector('.main-header__sm-menu-link--4')
+    const smMenuLink5 = document.querySelector('.main-header__sm-menu-link--5')
+    const smMenuLink6 = document.querySelector('.main-header__sm-menu-link--6')
+
+    // Smooth scroll function
+    function scrollToSection(sectionId) {
+      document.getElementById(sectionId).scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+
+    smMenuBtn.addEventListener('click', () => {
+      smMenu.style.transitionDelay = '0s'
+      smMenu.classList.add('main-header__sm-menu--active')
+
+      smMenuLink1.style.transitionDelay = '.5s'
+      smMenuLink1.style.transform = 'translateY(0)'
+      smMenuLink1.style.opacity = '1'
+
+      smMenuLink2.style.transitionDelay = '.6s'
+      smMenuLink2.style.transform = 'translateY(0)'
+      smMenuLink2.style.opacity = '1'
+
+      smMenuLink3.style.transitionDelay = '.7s'
+      smMenuLink3.style.transform = 'translateY(0)'
+      smMenuLink3.style.opacity = '1'
+
+      smMenuLink4.style.transitionDelay = '.8s'
+      smMenuLink4.style.transform = 'translateY(0)'
+      smMenuLink4.style.opacity = '1'
+
+      smMenuLink5.style.transitionDelay = '.9s'
+      smMenuLink5.style.transform = 'translateY(0)'
+      smMenuLink5.style.opacity = '1'
+
+      smMenuLink6.style.transitionDelay = '1.0s'
+      smMenuLink6.style.transform = 'translateY(0)'
+      smMenuLink6.style.opacity = '1'
+    })
+
+    smMenuLinks.forEach((ele) => {
+      ele.addEventListener('click', () => {
+        smMenuLink6.style.transitionDelay = '0s'
+        smMenuLink6.style.transform = 'translateY(50px)'
+        smMenuLink6.style.opacity = '0'
+
+        smMenuLink5.style.transitionDelay = '.1s'
+        smMenuLink5.style.transform = 'translateY(50px)'
+        smMenuLink5.style.opacity = '0'
+
+        smMenuLink4.style.transitionDelay = '.2s'
+        smMenuLink4.style.transform = 'translateY(50px)'
+        smMenuLink4.style.opacity = '0'
+
+        smMenuLink3.style.transitionDelay = '.3s'
+        smMenuLink3.style.transform = 'translateY(50px)'
+        smMenuLink3.style.opacity = '0'
+
+        smMenuLink2.style.transitionDelay = '.4s'
+        smMenuLink2.style.transform = 'translateY(50px)'
+        smMenuLink2.style.opacity = '0'
+
+        smMenuLink1.style.transitionDelay = '.5s'
+        smMenuLink1.style.transform = 'translateY(50px)'
+        smMenuLink1.style.opacity = '0'
+
+        smMenu.style.transitionDelay = '.8s'
+        smMenu.classList.remove('main-header__sm-menu--active')
+
+        setTimeout(() => {
+          document.getElementById(ele.name).scrollIntoView({
+            behavior: 'smooth'
+          })
+        }, 900)
+      })
+    })
+
+    smMenuCloseBtn.addEventListener('click', () => {
+      smMenuLink6.style.transitionDelay = '0s'
+      smMenuLink6.style.transform = 'translateY(50px)'
+      smMenuLink6.style.opacity = '0'
+
+      smMenuLink5.style.transitionDelay = '.1s'
+      smMenuLink5.style.transform = 'translateY(50px)'
+      smMenuLink5.style.opacity = '0'
+
+      smMenuLink4.style.transitionDelay = '.2s'
+      smMenuLink4.style.transform = 'translateY(50px)'
+      smMenuLink4.style.opacity = '0'
+
+      smMenuLink3.style.transitionDelay = '.3s'
+      smMenuLink3.style.transform = 'translateY(50px)'
+      smMenuLink3.style.opacity = '0'
+
+      smMenuLink2.style.transitionDelay = '.4s'
+      smMenuLink2.style.transform = 'translateY(50px)'
+      smMenuLink2.style.opacity = '0'
+
+      smMenuLink1.style.transitionDelay = '.5s'
+      smMenuLink1.style.transform = 'translateY(50px)'
+      smMenuLink1.style.opacity = '0'
+
+      smMenu.style.transitionDelay = '.8s'
+      smMenu.classList.remove('main-header__sm-menu--active')
+    })
+
+    // Theme color selector
+    const themeColorSelector = document.querySelector('.themeClrSelector')
+    const themeColorSelectorInput = document.querySelector('.themeClrSelector__input')
+    const root = document.documentElement;
+
+    const hexToRgb = (hex) => {
+      let result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex)
+      return result
+        ? {
+            r: parseInt(result[1], 16),
+            g: parseInt(result[2], 16),
+            b: parseInt(result[3], 16),
+          }
+        : null
+    }
+
+    const eventFire = (el, etype) => {
+      if (el.fireEvent) {
+        el.fireEvent('on' + etype)
+      } else {
+        let evObj = document.createEvent('Events')
+        evObj.initEvent(etype, true, false)
+        el.dispatchEvent(evObj)
+      }
+    }
+
+    themeColorSelector.addEventListener('click', () => {
+      eventFire(themeColorSelectorInput, 'input')
+    })
+
+    const setDynamicColor = (color) => {
+      const { r, g, b } = hexToRgb(`${color}`)
+      root.style.setProperty('--themeColor', `${r},${g},${b}`);
+    }
+
+    themeColorSelectorInput.addEventListener('input', (e) => {
+      setDynamicColor(e.target.value)
+    })
+
+    // Header logo click
+    const headerLogoConatiner = document.querySelector('.main-header__logo-container')
+    headerLogoConatiner.addEventListener('click', () => {
+      location.href = 'index.html'
+    })
+  </script>
+
+  <style>
+    /* Additional CSS for new sections */
+    
+    /* Resume Section Styles */
+    .resume {
+      background: rgba(248, 249, 250, 1);
+    }
+
+    .resume__content {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      grid-gap: 6rem;
+      align-items: start;
+    }
+
+    .resume__preview-box {
+      background: #fff;
+      padding: 4rem;
+      border-radius: 10px;
+      box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .resume__preview-icon {
+      margin-bottom: 2rem;
+    }
+
+    .resume__buttons {
+      margin-top: 3rem;
+    }
+
+    .resume__buttons .btn {
+      margin: 0 1rem 1rem 0;
+    }
+
+    .resume__highlights {
+      padding: 2rem 0;
+    }
+
+    .resume__highlights-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .resume__highlight-item {
+      background: #fff;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      font-size: 1.6rem;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 56.25em) {
+      .resume__content {
+        grid-template-columns: 1fr;
+        grid-gap: 4rem;
+      }
+    }
+
+    @media (max-width: 37.5em) {
+      .resume__preview-box {
+        padding: 3rem 2rem;
+      }
+      
+      .resume__buttons .btn {
+        width: 100%;
+        margin: 0 0 1rem 0;
+      }
+    }
+
+    /* Projects Button Improvements */
+    .projects__buttons {
+      display: flex;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 37.5em) {
+      .projects__buttons {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      
+      .projects__buttons .btn {
+        width: 100%;
+      }
+    }
+
+    /* Education Section Styles */
+    .education {
+      background: rgba(252, 252, 252, 1);
+    }
+
+    .education__content {
+      display: grid;
+      grid-gap: 6rem;
+    }
+
+    .education__heading {
+      margin-bottom: 4rem;
+      color: rgba(var(--themeColor), 1);
+    }
+
+    .education__item {
+      background: #fff;
+      padding: 3rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+      margin-bottom: 3rem;
+    }
+
+    .education__item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .education__degree {
+      font-size: 2.2rem;
+      color: #333;
+      font-weight: 600;
+    }
+
+    .education__year {
+      font-size: 1.6rem;
+      color: rgba(var(--themeColor), 1);
+      font-weight: 600;
+      background: rgba(var(--themeColor), 0.1);
+      padding: 0.5rem 1.5rem;
+      border-radius: 20px;
+    }
+
+    .education__institution {
+      font-size: 1.8rem;
+      color: #666;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    .education__description {
+      font-size: 1.6rem;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .education__coursework {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    .education__coursework li {
+      font-size: 1.5rem;
+      color: #666;
+      padding: 1rem;
+      background: #f8f9fa;
+      border-radius: 5px;
+      position: relative;
+      padding-left: 2.5rem;
+    }
+
+    .education__coursework li:before {
+      content: '✓';
+      position: absolute;
+      left: 1rem;
+      color: rgba(var(--themeColor), 1);
+      font-weight: bold;
+    }
+
+    /* Certifications Grid */
+    .certifications__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 3rem;
+      margin-top: 2rem;
+    }
+
+    .certification__item {
+      background: #fff;
+      padding: 3rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .certification__item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .certification__badge-img {
+      width: 8rem;
+      height: 8rem;
+      object-fit: contain;
+    }
+
+    .certification__title {
+      font-size: 1.8rem;
+      color: #333;
+      margin-bottom: 0.5rem;
+    }
+
+    .certification__code {
+      font-size: 1.4rem;
+      color: rgba(var(--themeColor), 1);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .certification__issuer {
+      font-size: 1.4rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+
+    .certification__status {
+      background: rgba(40, 167, 69, 0.1);
+      color: #28a745;
+      padding: 0.5rem 1rem;
+      border-radius: 15px;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    /* Achievements List */
+    .achievements__list {
+      display: grid;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .achievement__item {
+      background: #fff;
+      padding: 2.5rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      display: flex;
+      align-items: flex-start;
+      gap: 2rem;
+    }
+
+    .achievement__icon {
+      font-size: 3rem;
+      flex-shrink: 0;
+    }
+
+    .achievement__title {
+      font-size: 1.8rem;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+
+    .achievement__description {
+      font-size: 1.5rem;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    /* Documents Grid */
+    .documents__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .document__item {
+      background: #fff;
+      padding: 2.5rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .document__item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    }
+
+    .document__icon {
+      font-size: 2.5rem;
+      flex-shrink: 0;
+    }
+
+    .document__title {
+      font-size: 1.6rem;
+      color: #333;
+      margin-bottom: 0.5rem;
+    }
+
+    .document__description {
+      font-size: 1.3rem;
+      color: #666;
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 56.25em) {
+      .education__coursework {
+        grid-template-columns: 1fr;
+      }
+      
+      .certifications__grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .certification__item {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .achievement__item {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 37.5em) {
+      .education__item {
+        padding: 2rem;
+      }
+      
+      .education__item-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+      
+      .documents__grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .document__item {
+        padding: 2rem;
+      }
+    }
+  </style>
+</body>
+
+</html>
