@@ -1,380 +1,1287 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css" />
-  <title>Reza Safari</title>
-  <meta name="description" content="Reza Safari - Cloud Computing Technology Graduate & Aspiring Cloud Engineer" />
-</head>
+  <title>Reza Safari - IT & Cloud Specialist</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: inherit;
+    }
 
+    :root {
+      --themeColor: 46, 139, 87;
+      /* Tech Green Theme Color in (R,G,B) format */
+      --accent-color: 0, 128, 128;
+      /* Teal accent */
+    }
+
+    html {
+      font-size: 62.5%;
+      scroll-behavior: smooth;
+    }
+
+    @media (max-width: 75em) {
+      html {
+        font-size: 60%;
+      }
+    }
+
+    @media (max-width: 56.25em) {
+      html {
+        font-size: 58%;
+      }
+    }
+
+    @media (max-width: 37.5em) {
+      html {
+        font-size: 56%;
+      }
+    }
+
+    body {
+      font-family: 'PT Sans', sans-serif;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Utils */
+    .btn {
+      font-family: inherit;
+      letter-spacing: 1px;
+      font-weight: 700;
+      border: none;
+      box-shadow: none;
+      cursor: pointer;
+      padding: 1.8rem 4rem;
+      font-size: 1.8rem;
+      border-radius: 8px;
+      border: 2px solid rgba(var(--themeColor), 1);
+      transition: all 0.3s ease;
+    }
+
+    @media (max-width: 37.5em) {
+      .btn {
+        padding: 2rem 4rem;
+      }
+    }
+
+    .btn-theme {
+      background: rgba(var(--themeColor), 1);
+      color: #fff;
+      box-shadow: 0 8px 25px 0 rgba(var(--themeColor), 0.3);
+    }
+
+    .btn-theme:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px 0 rgba(var(--themeColor), 0.4);
+    }
+
+    .btn-inv {
+      color: rgba(var(--themeColor), 1);
+      background: #fff;
+    }
+
+    .btn-inv:hover {
+      background: rgba(var(--themeColor), 1);
+      color: #fff;
+    }
+
+    .btn-sm {
+      padding: 1.3rem 2rem;
+      font-size: 1.6rem;
+      border: none;
+    }
+
+    .main-container {
+      max-width: 120rem;
+      margin: auto;
+      width: 90%;
+    }
+
+    .main-section {
+      padding: 12rem 0;
+    }
+
+    .main-section__content {
+      margin-top: 10rem;
+    }
+
+    @media (max-width: 37.5em) {
+      .main-section {
+        padding: 10rem 0;
+      }
+
+      .main-section__content {
+        margin-top: 9rem;
+      }
+    }
+
+    .heading-primary {
+      font-family: 'Roboto', sans-serif;
+      font-size: 4.5rem;
+      letter-spacing: 1px;
+      line-height: 1.3;
+      color: #000;
+      font-weight: 700;
+    }
+
+    @media (max-width: 37.5em) {
+      .heading-primary {
+        font-size: 4rem;
+      }
+    }
+
+    .heading-primary__sm {
+      font-size: 2rem;
+      display: block;
+      margin-bottom: 2.5rem;
+      font-weight: 400;
+    }
+
+    .heading-secondary {
+      font-family: 'Roboto', sans-serif;
+      font-size: 4rem;
+      letter-spacing: 1px;
+      line-height: 1.3;
+      color: #000;
+      font-weight: 600;
+    }
+
+    .heading-secondary__sm {
+      font-size: 1.8rem;
+      display: block;
+      margin-bottom: 2.5rem;
+    }
+
+    .heading-tertiary {
+      font-family: 'Roboto', sans-serif;
+      font-size: 3.4rem;
+      letter-spacing: 1px;
+      line-height: 1.3;
+      color: #000;
+      font-weight: 500;
+    }
+
+    .heading-quaternary {
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+      line-height: 1.3;
+      color: #000;
+      font-weight: 400;
+    }
+
+    @media (max-width: 37.5em) {
+      .heading-secondary {
+        font-size: 3.7rem;
+      }
+
+      .heading-tertiary {
+        font-size: 3rem;
+      }
+    }
+
+    .text-primary {
+      font-size: 1.9rem;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    .text-primary span {
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+
+    .text-primary span:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Tech-inspired animations */
+    @keyframes downToUp {
+      0% {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInScale {
+      0% {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    /* Main Header */
+    .main-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2.5rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+    }
+
+    .main-header__logo-container {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .main-header__logo-img-cont {
+      margin-right: 1.5rem;
+      width: 4rem;
+      height: 4rem;
+      overflow: hidden;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(var(--themeColor), 1), rgba(var(--accent-color), 1));
+      background-position: center;
+      background-size: contain;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      font-size: 1.8rem;
+    }
+    .main-header__logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+    .main-header__logo-text {
+      font-family: 'Roboto', sans-serif;
+      font-size: 2.2rem;
+      letter-spacing: 1px;
+      color: #000;
+      font-weight: 500;
+    }
+
+    .main-header__navigation-links {
+      display: flex;
+      align-items: center;
+    }
+
+    .main-header__navigation-link {
+      padding: 1.3rem 2rem;
+      font-size: 1.6rem;
+      letter-spacing: 1px;
+      color: #000;
+      font-weight: 400;
+      transition: color 0.3s ease;
+    }
+
+    .main-header__navigation-link:hover {
+      color: rgba(var(--themeColor), 1);
+    }
+
+    @media (max-width: 56.25em) {
+      .main-header__navigation-link {
+        padding: 1.3rem 1.5rem;
+      }
+    }
+
+    @media (max-width: 37.5em) {
+      .main-header__navigation-links {
+        display: none;
+      }
+    }
+
+    /* Mobile menu styles */
+    .main-header__sm-scr-nav-btn {
+      padding: 1rem 1rem;
+      display: none;
+      cursor: pointer;
+    }
+
+    @media (max-width: 37.5em) {
+      .main-header__sm-scr-nav-btn {
+        display: block;
+      }
+    }
+
+    .main-header__sm-scr-nav-btn-line {
+      height: 2px;
+      background: #000;
+      width: 3rem;
+      border-radius: 50px;
+      margin-bottom: 8px;
+    }
+
+    .main-header__sm-scr-nav-btn-line:last-child {
+      margin-bottom: 0;
+    }
+
+    .main-header__sm-menu {
+        background: #fff;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh; /* Ensure full height */
+        min-height: 100vh; /* Change from 40rem to 100vh */
+        transform: translateX(-100%);
+        transition: transform 0.5s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8rem 0; /* Add padding to prevent overlap */
+    }
+
+    .main-header__sm-menu-close {
+      position: absolute;
+      top: 3.3rem;
+      right: 2.5rem;
+      width: 3rem;
+      height: 3rem;
+      cursor: pointer;
+    }
+
+    .main-header__sm-menu-close:before,
+    .main-header__sm-menu-close:after {
+      position: absolute;
+      content: ' ';
+      height: 3rem;
+      width: 2px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #000;
+    }
+
+    .main-header__sm-menu-close:before {
+      transform: rotate(45deg);
+    }
+
+    .main-header__sm-menu-close:after {
+      transform: rotate(-45deg);
+    }
+
+    .main-header__sm-menu--active {
+      transform: translateX(0);
+    }
+
+    .main-header__sm-menu-links {
+        width: 90%;
+        max-height: 60vh; /* Limit height */
+        overflow-y: auto; /* Allow scrolling if needed */
+    }
+
+    .main-header__sm-menu-link {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 0.3s, transform 0.3s;
+      font-size: 2.5rem;
+      text-align: center;
+      display: block;
+      padding: 2.5rem; /* Reduce padding from 3rem to 2.5rem */
+      color: #555;
+    }
+
+    @media (max-width: 37.5em) {
+      .main-header {
+        padding: 2.3rem 1.5rem;
+      }
+
+      .main-header__logo-img-cont {
+        margin-right: 1rem;
+      }
+    }
+
+    /* Hero Section with Tech Pattern */
+    .home-hero {
+      display: flex;
+      min-height: 100vh;
+      background: linear-gradient(135deg, rgba(46, 139, 87, 0.05) 0%, rgba(0, 128, 128, 0.05) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .home-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: 
+        radial-gradient(circle at 25% 25%, rgba(var(--themeColor), 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(var(--accent-color), 0.1) 0%, transparent 50%);
+      z-index: 1;
+    }
+
+    .home-hero__content {
+      max-width: 120rem;
+      margin: auto;
+      width: 90%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 8rem;
+      align-items: center;
+      animation: downToUp 0.8s;
+      position: relative;
+      z-index: 2;
+    }
+
+    @media (max-width: 56.25em) {
+      .home-hero__content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        grid-gap: 4rem;
+      }
+    }
+
+    @media (max-width: 37.5em) {
+      .home-hero {
+        min-height: unset;
+        padding: 15rem 0 10rem 0;
+      }
+
+      .home-hero__content {
+        margin: 0 auto;
+        grid-gap: 3rem;
+      }
+    }
+
+    .home-hero__text-content h1 {
+      margin-bottom: 3rem;
+    }
+
+    .home-hero__text-content p {
+      margin-bottom: 4rem;
+    }
+
+    .home-hero__visual {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20rem;
+      color: rgba(var(--themeColor), 0.2);
+    }
+
+    .home-hero__btn-theme {
+      margin-right: 2rem;
+    }
+
+    @media (max-width: 37.5em) {
+  .home-hero__text-content > div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .home-hero__btn-theme,
+  .home-hero__btn-inv {
+    width: 100%;
+    margin: 0 0 2rem 0;
+  }
+  
+  .home-hero__btn-inv {
+    margin: 0;
+  }
+}
+.hero-bio-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+}
+
+@media (max-width: 56.25em) {
+  .hero-bio-image {
+    max-width: 300px;
+  }
+}
+
+    /* About Section */
+    .about {
+      background: rgb(252, 252, 252);
+      position: relative;
+    }
+
+    .about::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: 
+        linear-gradient(90deg, transparent 0%, rgba(var(--themeColor), 0.03) 50%, transparent 100%);
+      z-index: 1;
+    }
+
+    .about .main-container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .about__info {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 8rem;
+    }
+
+    @media (max-width: 37.5em) {
+      .about__info {
+        grid-template-columns: 1fr;
+        grid-gap: 6rem;
+      }
+
+      .about__btn-theme {
+        width: 70%;
+      }
+    }
+
+    .about__heading-quaternary {
+      margin-bottom: 3rem;
+    }
+
+    .about__main-info {
+      margin-bottom: 4rem;
+    }
+
+    .about__text-primary {
+      margin-bottom: 4rem;
+    }
+
+    .about__info-heading {
+      margin-bottom: 3rem;
+      color: #555;
+    }
+
+    .about__skills {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .about__skill {
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 1.5rem 2rem;
+      margin-right: 2rem;
+      margin-bottom: 2rem;
+      background: linear-gradient(135deg, rgba(var(--themeColor), 0.1), rgba(var(--accent-color), 0.1));
+      color: rgba(var(--themeColor), 1);
+      border-radius: 25px;
+      font-weight: 500;
+      border: 1px solid rgba(var(--themeColor), 0.2);
+    }
+
+    /* Skills Showcase */
+    .skills-showcase {
+      background: rgba(247, 247, 247, 1);
+      padding: 5rem 3rem;
+    }
+
+    .skills-showcase__list {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .skills-showcase__list-item {
+      padding: 3rem;
+      border-radius: 12px;
+      background: #fff;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .skills-showcase__list-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .skills-showcase__list-item i {
+      color: rgba(var(--themeColor), 1);
+      font-size: 5rem;
+    }
+
+    @media (max-width: 75em) {
+      .skills-showcase__list-item {
+        padding: 1.5rem;
+      }
+    }
+
+    @media (max-width: 56.25em) {
+      .skills-showcase {
+        padding: 5rem;
+      }
+
+      .skills-showcase__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 5rem;
+      }
+
+      .skills-showcase__list-item {
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 37.5em) {
+      .skills-showcase {
+        padding: 4rem;
+      }
+
+      .skills-showcase__list {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 4rem;
+      }
+    }
+
+    /* Resume Section */
+    .resume {
+      background: linear-gradient(135deg, rgba(var(--themeColor), 0.02) 0%, rgba(var(--accent-color), 0.02) 100%);
+    }
+
+    .resume__content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 8rem;
+      margin-top: 6rem;
+    }
+
+    @media (max-width: 56.25em) {
+      .resume__content {
+        grid-template-columns: 1fr;
+        grid-gap: 6rem;
+      }
+    }
+
+    .resume__section h3 {
+      margin-bottom: 3rem;
+    }
+
+    .resume__section p {
+      margin-bottom: 4rem;
+    }
+
+    .resume__buttons {
+      display: flex;
+      text-align: center;
+      gap: 2rem;
+    }
+
+    @media (max-width: 37.5em) {
+      .resume__buttons {
+        flex-direction: column;
+      }
+    }
+
+    .resume__highlights {
+      background: white;
+      padding: 3rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    .resume__highlights ul {
+      list-style: none;
+    }
+
+    .resume__highlights li {
+      padding: 1rem 0;
+      font-size: 1.7rem;
+      color: #555;
+      border-bottom: 1px solid #eee;
+      position: relative;
+      padding-left: 3rem;
+    }
+
+    .resume__highlights li:last-child {
+      border-bottom: none;
+    }
+
+    .resume__highlights li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: rgba(var(--themeColor), 1);
+      font-weight: bold;
+    }
+
+    /* Work Section */
+    .work {
+      padding: 12rem 0;
+    }
+
+    .work__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+      grid-gap: 4rem;
+      margin-top: 8rem;
+    }
+
+    .work__project {
+      background: white;
+      border-radius: 12px;
+      padding: 3rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .work__project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .work__project-icon {
+      width: 6rem;
+      height: 6rem;
+      background: linear-gradient(135deg, rgba(var(--themeColor), 1), rgba(var(--accent-color), 1));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
+      color: white;
+    }
+
+    .work__project h3 {
+      margin-bottom: 2rem;
+      color: #333;
+    }
+
+    .work__project p {
+      margin-bottom: 1.5rem;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    .work__project-tech {
+      font-size: 1.4rem;
+      color: rgba(var(--themeColor), 1);
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
+
+    /* Education Section with Certification Cards */
+    .education {
+      background: rgba(248, 250, 252, 1);
+      padding: 12rem 0;
+    }
+
+    .education__content {
+      margin-top: 8rem;
+    }
+
+    .education__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 6rem;
+      margin-bottom: 6rem;
+    }
+
+    @media (max-width: 56.25em) {
+      .education__grid {
+        grid-template-columns: 1fr;
+        grid-gap: 4rem;
+      }
+    }
+
+    .education__section {
+      background: white;
+      padding: 4rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .education__section h3 {
+      margin-bottom: 3rem;
+      color: #333;
+    }
+
+    .education__degree {
+      margin-bottom: 3rem;
+      padding: 2rem;
+      background: rgba(var(--themeColor), 0.05);
+      border-radius: 8px;
+      border-left: 4px solid rgba(var(--themeColor), 1);
+    }
+
+    .education__degree strong {
+      display: block;
+      font-size: 1.8rem;
+      color: rgba(var(--themeColor), 1);
+      margin-bottom: 1rem;
+    }
+
+    .certifications {
+      margin-top: 6rem;
+    }
+
+    .certifications__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+      grid-gap: 3rem;
+      margin-top: 4rem;
+    }
+
+    .certification__card {
+      background: white;
+      border-radius: 12px;
+      padding: 3rem;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .certification__card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(135deg, rgba(var(--themeColor), 1), rgba(var(--accent-color), 1));
+    }
+
+    .certification__card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .certification__icon {
+      width: 6rem;
+      height: 6rem;
+      background: linear-gradient(135deg, rgba(var(--themeColor), 0.2), rgba(var(--accent-color), 0.2));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 2rem;
+      font-size: 2.5rem;
+      color: rgba(var(--themeColor), 1);
+    }
+
+    .certification__title {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+
+    .certification__status {
+      font-size: 1.4rem;
+      color: #666;
+    }
+
+    .certification__status--completed {
+      color: rgba(var(--themeColor), 1);
+      font-weight: 600;
+    }
+
+    /* Contact Section */
+    .contact {
+      background: linear-gradient(135deg, rgba(var(--themeColor), 0.08) 0%, rgba(var(--accent-color), 0.08) 100%);
+      position: relative;
+    }
+
+    .contact::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: 
+        radial-gradient(circle at 20% 80%, rgba(var(--themeColor), 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(var(--accent-color), 0.1) 0%, transparent 50%);
+      z-index: 1;
+    }
+
+    .contact .main-container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .contact__form-cont {
+      border-radius: 12px;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    }
+
+    .contact__form {
+      background: #fff;
+      padding: 5rem;
+    }
+
+    @media (max-width: 56.25em) {
+      .contact__form-cont {
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+
+    @media (max-width: 37.5em) {
+      .contact__form-cont {
+        grid-template-columns: 1fr;
+      }
+
+      .contact__form {
+        padding: 3rem;
+      }
+    }
+
+    .contact__form-field {
+      margin-bottom: 3rem;
+    }
+
+    .contact__form-field-label {
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      color: #444;
+      letter-spacing: 1px;
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    .contact__form-field-input {
+      display: block;
+      padding: 2rem;
+      width: 100%;
+      border: 2px solid rgba(225, 225, 225, 1);
+      font-size: 1.6rem;
+      resize: none;
+      border-radius: 8px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      transition: border-color 0.3s ease;
+    }
+
+    .contact__form-field-input:focus {
+      outline: none;
+      border-color: rgba(var(--themeColor), 1);
+    }
+
+    .contact__form-field-input::placeholder {
+      color: rgb(175, 175, 175);
+      font-weight: 400;
+      font-size: 1.6rem;
+    }
+
+    .contact__form-submit {
+      padding: 2rem;
+      width: 100%;
+      font-size: 1.6rem;
+      border: none;
+      letter-spacing: 1px;
+      font-family: inherit;
+      font-weight: 700;
+      background: linear-gradient(135deg, rgba(var(--themeColor), 1), rgba(var(--accent-color), 1));
+      color: #fff;
+      margin-top: 4rem;
+      display: block;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .contact__form-submit:hover {
+      transform: translateY(-2px);
+    }
+
+    .contact__form-visual {
+      background: linear-gradient(135deg, rgba(var(--themeColor), 1), rgba(var(--accent-color), 1));
+      background-position: bottom;
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 4rem;
+      color: white;
+    }
+
+    @media (max-width: 37.5em) {
+      .contact__form-visual {
+        display: none;
+      }
+    }
+
+    .contact__info {
+      text-align: left;
+    }
+
+    .contact__info h3 {
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      font-weight: 600;
+    }
+
+    .contact__info p {
+      font-size: 1.6rem;
+      margin-bottom: 1.5rem;
+      opacity: 0.9;
+    }
+
+    /* Footer */
+    .main-footer__upper {
+      background: #000;
+      padding: 10rem 0;
+    }
+
+    .main-footer__links {
+      display: flex;
+      max-width: 50rem;
+      align-items: center;
+      justify-content: space-between;
+      margin: auto;
+    }
+
+    .main-footer__link a {
+      color: #fff;
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .main-footer__link a:hover {
+      color: rgba(var(--themeColor), 1);
+    }
+
+    @media (max-width: 37.5em) {
+      .main-footer__upper {
+        padding: 7rem 0;
+      }
+
+      .main-footer__links {
+        display: block;
+      }
+
+      .main-footer__link a {
+        margin-bottom: 0.5rem;
+        padding: 3rem 1.5rem;
+        display: block;
+      }
+    }
+
+    .main-footer__mid-line {
+      background: grey;
+      height: 1px;
+      margin-top: 6rem;
+    }
+
+    .main-footer__socials {
+      display: flex;
+      align-content: center;
+      justify-content: space-between;
+      max-width: 25rem;
+      margin: auto;
+      margin-top: 6rem;
+    }
+
+    .main-footer__social-link-icon {
+      width: 2.5rem;
+      transition: transform 0.3s ease;
+    }
+
+    .main-footer__social-link-icon:hover {
+      transform: scale(1.2);
+    }
+
+    .main-footer__bottom {
+      padding: 5rem 2rem;
+      background: #222;
+    }
+
+    .main-footer__bottom-txt {
+      color: #eee;
+      font-size: 1.3rem;
+      word-spacing: 2px;
+      text-align: center;
+    }
+
+    .main-footer__bottom-txt a {
+      text-decoration: underline;
+      color: #fff;
+      font-weight: 700;
+    }
+
+    /* Theme Color Selector */
+    .themeClrSelector {
+      position: fixed;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+      z-index: 10;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      overflow: hidden;
+      border-radius: 50% 0 0 50%;
+    }
+
+    @media only screen and (max-width: 37.5em) {
+      .themeClrSelector {
+        top: 100%;
+        transform: translateY(-100%);
+      }
+    }
+
+    .themeClrSelector__input {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      width: 5rem;
+      height: 5rem;
+      opacity: 0;
+      position: relative;
+      z-index: 10;
+    }
+
+    .themeClrSelector__img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    /* Section Dividers */
+    .section-divider {
+      height: 5px;
+      width: 8rem;
+      background: linear-gradient(135deg, rgba(var(--themeColor), 1), rgba(var(--accent-color), 1));
+      margin: 3rem auto;
+      border-radius: 100px;
+    }
+  </style>
+</head>
 <body>
   <header class="main-header">
     <div class="main-header__logo-container">
       <div class="main-header__logo-img-cont">
-        <img
-          src="./assets/reza.png"
-          alt="Reza Safari" class="main-header__logo-img" />
-      </div>
+  <img src="./assets/reza.png" alt="Reza Safari" class="main-header__logo-img">
+</div>
       <h4 class="main-header__logo-text">Reza Safari</h4>
     </div>
-    <nav class="main-header__navigation">
-      <ul class="main-header__navigation-links">
-        <li class="main-header__navigation-link"><a href="./index.html"> Home </a></li>
-        <li class="main-header__navigation-link"><a href="./index.html#about"> About </a></li>
-        <li class="main-header__navigation-link"><a href="./index.html#resume"> Resume </a></li>
-        <li class="main-header__navigation-link">
-          <a href="./index.html#projects"> Work Samples </a>
-        </li>
-        <li class="main-header__navigation-link"><a href="./index.html#education"> Education </a></li>
-        <li class="main-header__navigation-link"><a href="./index.html#contact"> Contact </a></li>
-      </ul>
-    </nav>
     <div class="main-header__sm-scr-nav-btn">
       <div class="main-header__sm-scr-nav-btn-line"></div>
       <div class="main-header__sm-scr-nav-btn-line"></div>
     </div>
+    <nav class="main-header__navigation">
+      <ul class="main-header__navigation-links">
+        <li><a href="#home" class="main-header__navigation-link">Home</a></li>
+        <li><a href="#about" class="main-header__navigation-link">About</a></li>
+        <li><a href="#resume" class="main-header__navigation-link">Resume</a></li>
+        <li><a href="#work" class="main-header__navigation-link">Work</a></li>
+        <li><a href="#education" class="main-header__navigation-link">Education</a></li>
+        <li><a href="#contact" class="main-header__navigation-link">Contact</a></li>
+      </ul>
+    </nav>
     <div class="main-header__sm-menu">
-      <div class="main-header__sm-menu-close">
-
-      </div>
+      <div class="main-header__sm-menu-close"></div>
       <ul class="main-header__sm-menu-links">
-        <li>
-          <a class="main-header__sm-menu-link main-header__sm-menu-link--1" name="home-hero">Home</a>
-        </li>
-        <li>
-          <a class="main-header__sm-menu-link main-header__sm-menu-link--2" name="about">About</a>
-        </li>
-        <li>
-          <a class="main-header__sm-menu-link main-header__sm-menu-link--3" name="resume">Resume</a>
-        </li>
-        <li>
-          <a class="main-header__sm-menu-link main-header__sm-menu-link--4" name="projects">Work Samples</a>
-        </li>
-        <li>
-          <a class="main-header__sm-menu-link main-header__sm-menu-link--5" name="education">Education</a>
-        </li>
-        <li>
-          <a class="main-header__sm-menu-link main-header__sm-menu-link--6" name="contact">Contact</a>
-        </li>
+        <li><a href="#home" class="main-header__sm-menu-link main-header__sm-menu-link--1" name="home">Home</a></li>
+        <li><a href="#about" class="main-header__sm-menu-link main-header__sm-menu-link--2" name="about">About</a></li>
+        <li><a href="#resume" class="main-header__sm-menu-link main-header__sm-menu-link--3" name="resume">Resume</a></li>
+        <li><a href="#work" class="main-header__sm-menu-link main-header__sm-menu-link--4" name="work">Work</a></li>
+        <li><a href="#education" class="main-header__sm-menu-link main-header__sm-menu-link--5" name="education">Education</a></li>
+        <li><a href="#contact" class="main-header__sm-menu-link main-header__sm-menu-link--6" name="contact">Contact</a></li>
       </ul>
     </div>
   </header>
 
-  <!--Remove or Comment out this theme selector code when you are done with choosing the right color for your theme so this color selector don't appear when you host the site online-->
   <div class="themeClrSelector">
-    <input placeholder="Color Selector" type="color" value="#1DA1F2" class="themeClrSelector__input" />
-    <img alt="theme color tester" src="https://img.icons8.com/fluent/48/000000/rgb-circle-1.png"
-      class="themeClrSelector__img" />
+    <input type="color" class="themeClrSelector__input" value="#2E8B57" />
+    <img class="themeClrSelector__img" src="https://img.icons8.com/ios-filled/50/000000/paint-palette.png" alt="color picker" />
   </div>
-  <!---->
 
-  <section id="home-hero" class="home-hero">
+  <section class="main-section home-hero" id="home">
     <div class="home-hero__content">
-      <div class="home-hero__info">
-        <h1 class="heading-primary home-hero__heading-primary">
-          <span class="heading-primary__sm"> Hello 👋</span>
-          <span class="heading-primary__main">
-            I'm Shirin Javan — a Cloud Computing Technology Expert specializing in Microsoft Azure, Microsoft 365, and hybrid cloud environments.
-          </span>
+      <div class="home-hero__text-content">
+        <h1 class="heading-primary">
+          <span class="heading-primary__sm">Hello 👋 I'm</span>
+          Reza Safari
         </h1>
-        <button class="btn btn-theme home-hero__btn-theme" onclick="scrollToSection('projects')">Work Samples</button>
-        <button class="btn btn-inv home-hero__btn-theme" onclick="scrollToSection('contact')">Contact</button>
+        <p class="text-primary">
+          <span><strong>IT & Cloud Computing Specialist</strong></span>
+          <span>Transforming businesses with AWS, Microsoft Azure, and enterprise IT solutions. Specialized in cloud infrastructure, system administration, and scalable technology implementations.</span>
+        </p>
+        <div>
+          <a href="#work" class="btn btn-theme home-hero__btn-theme">View Projects</a>
+          <a href="#contact" class="btn btn-inv home-hero__btn-inv">Get In Touch</a>
+        </div>
       </div>
+      <div class="home-hero__visual">
+  <img src="./assets/reza2.png" alt="Reza Safari" class="hero-bio-image">
+</div>
     </div>
   </section>
 
-  <section id="about" class="about main-section">
+  <section class="main-section about" id="about">
     <div class="main-container">
-      <h2 class="heading-secondary projects__heading-secondary">
-        <span class="heading-secondary__sm"> About Me 🦄</span>
-        <span class="heading-secondary__main">
-          Here you will find more information about me, my background, and my current skills in cloud computing and system administration
-        </span>
-      </h2>
+      <h2 class="heading-secondary">About Me</h2>
+      <div class="section-divider"></div>
+      <p class="text-primary">
+        <span>Passionate IT professional with expertise in cloud computing, system administration, and enterprise solutions.</span>
+      </p>
       <div class="main-section__content">
         <div class="about__info">
           <div class="about__main-info">
-            <h3 class="heading-quaternary about__heading-quaternary">
-              My Story
-            </h3>
+            <h3 class="heading-tertiary about__heading-quaternary">My Journey</h3>
             <p class="text-primary about__text-primary">
-              <span>
-                I am a dedicated Cloud Computing Technology graduate from George Brown College with a strong foundation in software engineering. Currently pursuing opportunities in cloud engineering, I bring a unique combination of technical expertise and customer service experience that enables me to deliver effective solutions in real-world environments.
-              </span>
-              <span>
-                My journey began with a Bachelor's degree in Computer Engineering, and I've since specialized in cloud technologies, particularly Microsoft Azure and Microsoft 365 environments. Through hands-on projects and lab exercises, I've developed strong analytical, communication, and troubleshooting skills that are essential for modern cloud infrastructure management.
-              </span>
-              <span>
-                I have practical experience in system administration across both Linux and Windows environments, with a focus on creating scalable, secure, and resilient hybrid cloud setups. My certifications in Microsoft 365 Fundamentals and Azure Fundamentals demonstrate my commitment to staying current with cloud technologies and best practices.
-              </span>
+              <span>Currently pursuing a Postgraduate Certificate in Cloud Computing Technology at George Brown College, building on my Computer Science foundation from Kyiv Polytechnic Institute.</span>
+              <span>With over a decade of experience as an ERP/CRM Systems Administrator and IT Help Desk Technician at ARG Telecom, I've mastered the art of creating efficient, secure, and scalable IT solutions.</span>
+              <span>My expertise spans AWS cloud services, Microsoft Azure, system administration, and database management, with a passion for automation and optimization.</span>
             </p>
-            <button class="btn btn-theme about__btn-theme" onclick="scrollToSection('projects')">View Work Samples</button>
+            <a href="#work" class="btn btn-theme about__btn-theme">Explore My Work</a>
           </div>
-          <div class="about__skill-info">
-            <h3 class="heading-quaternary about__heading-quaternary">
-              Core Skills & Technologies
-            </h3>
-            <ul class="about__skills">
-              <li class="about__skill">Microsoft Azure</li>
-              <li class="about__skill">Microsoft 365</li>
-              <li class="about__skill">PowerShell</li>
-              <li class="about__skill">Windows Server</li>
-              <li class="about__skill">Linux Administration</li>
-              <li class="about__skill">DNS Configuration</li>
-              <li class="about__skill">Active Directory</li>
-              <li class="about__skill">System Administration</li>
-              <li class="about__skill">Cloud Security</li>
-              <li class="about__skill">Network Infrastructure</li>
-              <li class="about__skill">ServiceNow</li>
-              <li class="about__skill">Technical Support</li>
-              <li class="about__skill">Hybrid Cloud Solutions</li>
-              <li class="about__skill">IT Service Management</li>
-              <li class="about__skill">Customer Service</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="skills-showcase">
-    <ul class="skills-showcase__list">
-      <li class="skills-showcase__list-item">
-        <i class="devicon-azure-plain"></i>
-      </li>
-      <li class="skills-showcase__list-item">
-        <i class="devicon-windows8-original"></i>
-      </li>
-      <li class="skills-showcase__list-item">
-        <i class="devicon-linux-plain"></i>
-      </li>
-      <li class="skills-showcase__list-item">
-        <i class="devicon-powershell-plain"></i>
-      </li>
-      <li class="skills-showcase__list-item">
-        <i class="devicon-microsoftsqlserver-plain"></i>
-      </li>
-      <li class="skills-showcase__list-item">
-        <i class="devicon-git-plain"></i>
-      </li>
-      <li class="skills-showcase__list-item">
-        <i class="devicon-github-original"></i>
-      </li>
-      <li class="skills-showcase__list-item">
-        <i class="devicon-vscode-plain"></i>
-      </li>
-      <li class="skills-showcase__list-item">
-        <i class="devicon-amazonwebservices-original"></i>
-      </li>
-    </ul>
-  </section>
-
-  <!-- NEW RESUME SECTION -->
-  <section id="resume" class="resume main-section">
-    <div class="main-container">
-      <h2 class="heading-secondary">
-        <span class="heading-secondary__sm"> Resume 📄</span>
-        <span class="heading-secondary__main">
-          Download my complete resume with detailed experience and qualifications
-        </span>
-      </h2>
-      <div class="main-section__content">
-        <div class="resume__content">
-          <div class="resume__preview">
-            <div class="resume__preview-box">
-              <div class="resume__preview-icon">
-                <i class="devicon-github-original" style="font-size: 4rem; color: rgba(var(--themeColor), 1);"></i>
-              </div>
-              <h3 class="heading-tertiary">Professional Resume</h3>
-              <p class="text-primary">
-                <span>
-                  My comprehensive resume includes detailed work experience, technical skills, certifications, and project accomplishments in cloud computing and system administration.
-                </span>
-                <span>
-                  Updated with latest Microsoft Azure and Microsoft 365 certifications, hands-on project experience, and professional development achievements.
-                </span>
-              </p>
-              <div class="resume__buttons">
-                <button class="btn btn-theme" onclick="window.open('https://drive.google.com/file/d/1EbxPw8KW7UasksMBem_pUniZUTXEs-BD/view?usp=drive_link', '_blank')">Download PDF</button>
-                <button class="btn btn-inv" onclick="window.open('https://drive.google.com/file/d/1EbxPw8KW7UasksMBem_pUniZUTXEs-BD/view?usp=drive_link', '_blank')">View Online</button>
-              </div>
-            </div>
-          </div>
-          <div class="resume__highlights">
-            <h3 class="heading-quaternary">Resume Highlights</h3>
-            <ul class="resume__highlights-list">
-              <li class="resume__highlight-item">
-                <strong>Education:</strong> Cloud Computing Technology Graduate - George Brown College
-              </li>
-              <li class="resume__highlight-item">
-                <strong>Certifications:</strong> Microsoft 365 Fundamentals (MS-900), Azure Fundamentals (AZ-900)
-              </li>
-              <li class="resume__highlight-item">
-                <strong>Experience:</strong> System Administration, Cloud Infrastructure, Technical Support
-              </li>
-              <li class="resume__highlight-item">
-                <strong>Specialization:</strong> Hybrid Cloud Solutions, Microsoft Technologies, IT Service Management
-              </li>
-              <li class="resume__highlight-item">
-                <strong>Languages:</strong> PowerShell, Bash, SQL, Python (Basic)
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="projects" class="projects main-section">
-    <div class="main-container">
-      <h2 class="heading-secondary projects__heading-secondary">
-        <span class="heading-secondary__sm"> Work Samples 🛠️</span>
-        <span class="heading-secondary__main">
-          Here are some of the key projects and implementations I've completed during my cloud computing studies
-        </span>
-      </h2>
-      <div class="main-section__content">
-        <div class="projects__list">
-          <div class="projects__list-item">
-            <div class="projects__list-item-count">
-              <span class="projects__list-item-count-num"> 1 </span>
-              <span class="projects__list-item-count-line"> </span>
-              <span class="projects__list-item-count-end-dot"> </span>
-            </div>
-            <div class="projects__list-item-details">
-              <div class="projects__list-item-img-cont">
-                <img src="./assets/MS365.jpg" alt="Microsoft 365 Implementation" class="projects__list-item-img" />
-              </div>
-              <h3 class="heading-tertiary projects__list-item-heading-tertiary">
-                Microsoft 365 Environment Implementation
-              </h3>
-
-              <p class="text-primary projects__list-item-text-primary">
-                <span>
-                  <strong>Technologies Used:</strong> Microsoft 365 Admin Center, Azure Active Directory, Exchange Online, SharePoint, Teams, PowerShell
-                </span>
-                <span>
-                  Implemented and managed a comprehensive Microsoft 365 environment for a mid-size organization, ensuring scalability, flexibility, resilience, and security. This project involved configuring user accounts, security policies, and collaboration tools.
-                </span>
-                <span>
-                  <strong>Key Achievements:</strong> Successfully set up secure access controls, implemented backup strategies, configured multi-factor authentication, and ensured compliance with organizational security requirements through the Microsoft 365 Admin Center.
-                </span>
-              </p>
-              <div class="projects__buttons">
-                <button class="btn btn-theme projects__btn-theme" onclick="window.open('https://github.com/shirinjavan/microsoft365-implementation', '_blank')">
-                  View on GitHub
-                </button>
-                <button class="btn btn-inv projects__btn-inv" onclick="window.open('https://learn.microsoft.com/en-us/microsoft-365/?view=o365-worldwide', '_blank')">Documentation</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="projects__list-item projects__list-item--inv">
-            <div class="projects__list-item-details">
-              <div class="projects__list-item-img-cont">
-                <img src="./assets/ARM.png" alt="Azure Cloud Management" class="projects__list-item-img" />
-              </div>
-              <h3 class="heading-tertiary projects__list-item-heading-tertiary">
-                Azure Cloud Resource Management
-              </h3>
-
-              <p class="text-primary projects__list-item-text-primary">
-                <span>
-                  <strong>Technologies Used:</strong> Microsoft Azure Portal, Azure CLI, PowerShell, Virtual Machines, Storage Accounts, Virtual Networks, Azure Monitor
-                </span>
-                <span>
-                  Gained hands-on experience working in Microsoft Azure Portal, including managing resources, monitoring services, and understanding core cloud concepts. This project focused on implementing best practices for resource management and cost optimization.
-                </span>
-                <span>
-                  <strong>Skills Developed:</strong> Virtual machine deployment, storage management, networking configuration, security implementation, and cost management within Azure environments.
-                </span>
-              </p>
-              <div class="projects__buttons">
-                <button class="btn btn-theme projects__btn-theme" onclick="window.open('https://github.com/shirinjavan/azure-resource-management', '_blank')">
-                  View on GitHub
-                </button>
-                <button class="btn btn-inv projects__btn-inv" onclick="window.open('https://portal.azure.com', '_blank')">Azure Portal</button>
-              </div>
-            </div>
-            <div class="projects__list-item-count">
-              <span class="projects__list-item-count-num"> 2 </span>
-              <span class="projects__list-item-count-line"> </span>
-              <span class="projects__list-item-count-end-dot"> </span>
-            </div>
-          </div>
-
-          <div class="projects__list-item">
-            <div class="projects__list-item-count">
-              <span class="projects__list-item-count-num"> 3 </span>
-              <span class="projects__list-item-count-line"> </span>
-              <span class="projects__list-item-count-end-dot"> </span>
-            </div>
-            <div class="projects__list-item-details">
-              <div class="projects__list-item-img-cont">
-                <img src="./assets/Hybrid.jpg" alt="Hybrid Cloud Infrastructure" class="projects__list-item-img" />
-              </div>
-              <h3 class="heading-tertiary projects__list-item-heading-tertiary">
-                Hybrid Cloud Infrastructure Design
-              </h3>
-
-              <p class="text-primary projects__list-item-text-primary">
-                <span>
-                  <strong>Technologies Used:</strong> Windows Server, Linux (Ubuntu/CentOS), Active Directory, DNS, VPN, Azure Hybrid Services, PowerShell, Bash Scripting
-                </span>
-                <span>
-                  Designed and implemented hybrid cloud solutions combining on-premises Windows and Linux systems with cloud services. This project emphasized scalability, security, and resilience across different operating environments.
-                </span>
-                <span>
-                  <strong>Implementation Focus:</strong> Network integration, domain management, DNS configuration, and ensuring seamless connectivity between on-premises and cloud resources while maintaining security best practices and disaster recovery capabilities.
-                </span>
-              </p>
-              <div class="projects__buttons">
-                <button class="btn btn-theme projects__btn-theme" onclick="window.open('https://github.com/shirinjavan/hybrid-cloud-infrastructure', '_blank')">
-                  View on GitHub
-                </button>
-                <button class="btn btn-inv projects__btn-inv" onclick="window.open('https://aws.amazon.com/what-is/hybrid-cloud/', '_blank')">Architecture</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="projects__list-item projects__list-item--inv">
-            <div class="projects__list-item-details">
-              <div class="projects__list-item-img-cont">
-                <img src="./assets/it-service-management.jpg" alt="IT Service Management" class="projects__list-item-img" />
-              </div>
-              <h3 class="heading-tertiary projects__list-item-heading-tertiary">
-                IT Service Management & Support System
-              </h3>
-
-              <p class="text-primary projects__list-item-text-primary">
-                <span>
-                  <strong>Technologies Used:</strong> ServiceNow, Zendesk, Active Directory, Microsoft 365 Admin Center, PowerShell, Remote Desktop Tools
-                </span>
-                <span>
-                  Provided comprehensive first-level technical support using ticketing systems like ServiceNow and Zendesk, managing hardware, software, and network issues while maintaining detailed documentation and user communication.
-                </span>
-                <span>
-                  <strong>Specialization Areas:</strong> Microsoft 365 and Active Directory account management, password resets, access control implementation, user training on best practices, and incident resolution with focus on reducing repeat occurrences.
-                </span>
-              </p>
-              <div class="projects__buttons">
-                <button class="btn btn-theme projects__btn-theme" onclick="window.open('https://github.com/shirinjavan/itsm-support-system', '_blank')">
-                  Case Studies
-                </button>
-                <button class="btn btn-inv projects__btn-inv" onclick="window.open('#', '_blank')">Support Metrics</button>
-              </div>
-            </div>
-            <div class="projects__list-item-count">
-              <span class="projects__list-item-count-num"> 4 </span>
-              <span class="projects__list-item-count-line"> </span>
-              <span class="projects__list-item-count-end-dot"> </span>
+          <div>
+            <h3 class="heading-quaternary about__info-heading">Technical Expertise</h3>
+            <div class="about__skills">
+              <div class="about__skill">AWS Cloud Services</div>
+              <div class="about__skill">Microsoft Azure</div>
+              <div class="about__skill">Microsoft 365</div>
+              <div class="about__skill">Active Directory</div>
+              <div class="about__skill">SQL Databases</div>
+              <div class="about__skill">PowerShell</div>
+              <div class="about__skill">System Administration</div>
+              <div class="about__skill">Network Security</div>
+              <div class="about__skill">IT Service Management</div>
+              <div class="about__skill">Cloud Architecture</div>
+              <div class="about__skill">Automation</div>
+              <div class="about__skill">VPN Configuration</div>
             </div>
           </div>
         </div>
@@ -382,134 +1289,131 @@
     </div>
   </section>
 
-  <!-- NEW EDUCATION & ACKNOWLEDGEMENTS SECTION -->
-  <section id="education" class="education main-section">
+  <section class="main-section resume" id="resume">
     <div class="main-container">
-      <h2 class="heading-secondary">
-        <span class="heading-secondary__sm"> Education & Acknowledgements 🎓</span>
-        <span class="heading-secondary__main">
-          My academic background, professional certifications, and achievements in cloud computing and technology
-        </span>
-      </h2>
-      <div class="main-section__content">
-        <div class="education__content">
-          <div class="education__academic">
-            <h3 class="heading-tertiary education__heading">Academic Education</h3>
-            <div class="education__item">
-              <div class="education__item-header">
-                <h4 class="education__degree">Cloud Computing Technology Program</h4>
-                <span class="education__year">2024-2025</span>
-              </div>
-              <p class="education__institution">George Brown College, Toronto, ON</p>
-              <p class="education__description">
-                Specialized program focusing on Microsoft Azure, Microsoft 365, hybrid cloud environments, system administration, and IT service management. Coursework included hands-on labs, real-world projects, and industry best practices.
-              </p>
-              <ul class="education__coursework">
-                <li>Cloud Infrastructure Design and Implementation</li>
-                <li>Microsoft Azure Administration</li>
-                <li>Microsoft 365 Environment Management</li>
-                <li>System Administration (Windows/Linux)</li>
-                <li>Network Infrastructure and Security</li>
-                <li>IT Service Management and Support</li>
-              </ul>
+      <h2 class="heading-secondary">Professional Resume</h2>
+      <div class="section-divider"></div>
+      <p class="text-primary">
+        <span>Comprehensive overview of my professional experience, education, and technical qualifications.</span>
+      </p>
+      <div class="resume__content">
+        <div class="resume__section">
+          <h3 class="heading-tertiary">Resume Overview</h3>
+          <p class="text-primary">
+            <span>My resume showcases over 10 years of combined experience in IT support, ERP/CRM systems administration, and cloud computing technologies.</span>
+            <span>Featuring comprehensive technical skills, professional certifications, and proven track record in delivering enterprise-level solutions.</span>
+          </p>
+          <div class="resume__buttons">
+            <a href="https://drive.google.com/file/d/1f7idSC7ZnokM4YJNQknBUt1rvtw-1xGV/view?usp=drive_link" class="btn btn-theme">Download PDF</a>
+            <a href="https://drive.google.com/file/d/1f7idSC7ZnokM4YJNQknBUt1rvtw-1xGV/view?usp=drive_link" class="btn btn-inv">View Online</a>
+            <a href="https://drive.google.com/file/d/1pyj83Uiu_Vd0AIUnMf7qwP875e9vLQEa/view?usp=drive_link" class="btn btn-inv">View Transcript</a>
+          </div>
+        </div>
+        <div class="resume__highlights">
+          <h3 class="heading-tertiary">Career Highlights</h3>
+          <ul>
+            <li>AWS Certified Cloud Practitioner (All Domains)</li>
+            <li>Postgraduate Certificate in Cloud Computing Technology</li>
+            <li>10+ years ERP/CRM Systems Administration</li>
+            <li>Expert in Microsoft 365 & Azure ecosystems</li>
+            <li>Proven track record in IT infrastructure management</li>
+            <li>Specialist in PowerShell automation & SQL databases</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="main-section work" id="work">
+    <div class="main-container">
+      <h2 class="heading-secondary">Work & Projects</h2>
+      <div class="section-divider"></div>
+      <p class="text-primary">
+        <span>Showcasing key projects and professional achievements in IT infrastructure and cloud solutions.</span>
+      </p>
+      <div class="work__grid">
+        <div class="work__project">
+          <div class="work__project-icon">🏢</div>
+          <h3 class="heading-tertiary">Enterprise ERP/CRM Management</h3>
+          <div class="work__project-tech">Microsoft 365 • Active Directory • SQL • PowerShell</div>
+          <p>Administered comprehensive ERP and CRM platforms for ARG Telecom, managing user modules, optimizing SQL databases, and creating automated reporting systems.</p>
+          <p><strong>Key Achievements:</strong> Improved system efficiency by 40%, trained 200+ end users, and implemented cross-department workflows that streamlined operations.</p>
+          <a href="#" class="btn btn-sm">View Documentation</a>
+        </div>
+        <div class="work__project">
+          <div class="work__project-icon">🛠️</div>
+          <h3 class="heading-tertiary">IT Help Desk & Support</h3>
+          <div class="work__project-tech">ServiceNow • Intune • VPN • Network Troubleshooting</div>
+          <p>Provided comprehensive Tier 1 and Tier 2 technical support, managing incident tickets, configuring secure remote access, and maintaining detailed documentation.</p>
+          <p><strong>Key Achievements:</strong> Achieved 95% user satisfaction rate, reduced average resolution time by 30%, and implemented preventive maintenance protocols.</p>
+          <a href="#" class="btn btn-sm">Case Studies</a>
+        </div>
+        <div class="work__project">
+          <div class="work__project-icon">☁️</div>
+          <h3 class="heading-tertiary">Cloud Infrastructure Design</h3>
+          <div class="work__project-tech">AWS S3 • Azure VMs • Cloud Security • Infrastructure as Code</div>
+          <p>Designed and deployed scalable cloud infrastructure solutions, including secure S3 buckets for static hosting and Azure virtual machines for enterprise applications.</p>
+          <p><strong>Key Achievements:</strong> Reduced infrastructure costs by 25%, implemented robust security protocols, and enabled seamless scalability for growing business needs.</p>
+          <a href="https://github.com/rezasafari" class="btn btn-sm">GitHub Portfolio</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="main-section education" id="education">
+    <div class="main-container">
+      <h2 class="heading-secondary">Education & Certifications</h2>
+      <div class="section-divider"></div>
+      <p class="text-primary">
+        <span>Academic foundation and professional certifications driving continuous learning in cloud technologies.</span>
+      </p>
+      <div class="education__content">
+        <div class="education__grid">
+          <div class="education__section">
+            <h3 class="heading-tertiary">Academic Education</h3>
+            <div class="education__degree">
+              <strong>Postgraduate Certificate, Cloud Computing Technology</strong>
+              George Brown College, Toronto, ON (2024-2025)<br>
+              Comprehensive training in AWS, Azure, Microsoft 365, virtualization, automation, and cloud security with hands-on laboratory experience.
             </div>
-            
-            <div class="education__item">
-              <div class="education__item-header">
-                <h4 class="education__degree">Bachelor of Computer Engineering</h4>
-                <span class="education__year">Completed</span>
-              </div>
-              <p class="education__institution">Previous Institution</p>
-              <p class="education__description">
-                Comprehensive foundation in computer systems, software engineering principles, and technical problem-solving that provided the groundwork for specializing in cloud computing technologies.
-              </p>
+            <div class="education__degree">
+              <strong>Bachelor of Science, Computer Science</strong>
+              Kyiv Polytechnic Institute, Kyiv, Ukraine<br>
+              Specialized coursework in networking fundamentals, database systems, software engineering, and system architecture.
             </div>
           </div>
-
-          <div class="education__certifications">
-            <h3 class="heading-tertiary education__heading">Professional Certifications</h3>
-            <div class="certifications__grid">
-              <div class="certification__item">
-                <div class="certification__badge">
-                  <img src="https://images.credly.com/size/110x110/images/0c6d9839-f468-4adc-987d-5cfae4a9ee67/image.png" alt="MS-900 Badge" class="certification__badge-img">
-                </div>
-                <div class="certification__details">
-                  <h4 class="certification__title">Microsoft 365 Fundamentals</h4>
-                  <p class="certification__code">MS-900</p>
-                  <p class="certification__issuer">Microsoft</p>
-                  <span class="certification__status">Certified</span>
-                </div>
-              </div>
-
-              <div class="certification__item">
-                <div class="certification__badge">
-                  <img src="https://images.credly.com/size/110x110/images/be8fcaeb-c769-4858-b567-ffaaa73ce8cf/image.png" alt="AZ-900 Badge" class="certification__badge-img">
-                </div>
-                <div class="certification__details">
-                  <h4 class="certification__title">Microsoft Azure Fundamentals</h4>
-                  <p class="certification__code">AZ-900</p>
-                  <p class="certification__issuer">Microsoft</p>
-                  <span class="certification__status">Certified</span>
-                </div>
-              </div>
-            </div>
+          <div class="education__section">
+            <h3 class="heading-tertiary">Professional Development</h3>
+            <p class="text-primary">
+              <span>Committed to continuous learning through industry-leading certification programs and hands-on practical experience.</span>
+              <span>Regular participation in AWS and Microsoft virtual training events, technical webinars, and cloud computing workshops.</span>
+              <span>Active engagement with IT professional communities and technology forums to stay current with emerging trends.</span>
+            </p>
           </div>
-
-          <div class="education__achievements">
-            <h3 class="heading-tertiary education__heading">Additional Achievements</h3>
-            <div class="achievements__list">
-              <div class="achievement__item">
-                <div class="achievement__icon">🏆</div>
-                <div class="achievement__content">
-                  <h4 class="achievement__title">Academic Excellence</h4>
-                  <p class="achievement__description">Maintained high academic standing throughout Cloud Computing Technology program with focus on practical application and real-world problem solving.</p>
-                </div>
-              </div>
-
-              <div class="achievement__item">
-                <div class="achievement__icon">💼</div>
-                <div class="achievement__content">
-                  <h4 class="achievement__title">Professional Development</h4>
-                  <p class="achievement__description">Continuous learning in cloud technologies, attending Microsoft virtual events, and staying current with industry trends and best practices.</p>
-                </div>
-              </div>
-
-              <div class="achievement__item">
-                <div class="achievement__icon">🔧</div>
-                <div class="achievement__content">
-                  <h4 class="achievement__title">Hands-On Experience</h4>
-                  <p class="achievement__description">Completed extensive lab work and practical projects demonstrating real-world application of cloud computing concepts and system administration skills.</p>
-                </div>
-              </div>
+        </div>
+        
+        <div class="certifications">
+          <h3 class="heading-secondary">Professional Certifications</h3>
+          <div class="certifications__grid">
+            <div class="certification__card">
+              <div class="certification__icon">🏆</div>
+              <div class="certification__title">AWS Certified Cloud Practitioner</div>
+              <div class="certification__status certification__status--completed">Completed July 2025 (All Domains)</div>
             </div>
-          </div>
-
-          <div class="education__documents">
-            <h3 class="heading-tertiary education__heading">Official Documents</h3>
-            <div class="documents__grid">
-              <div class="document__item" onclick="window.open('https://drive.google.com/file/d/1JOJzgRjtoF48Njhhu90n0xtDUrr-x5dh/view?usp=drive_link', '_blank')">
-                <div class="document__icon">📜</div>
-                <div class="document__info">
-                  <h4 class="document__title">Official Transcript</h4>
-                  <p class="document__description">George Brown College</p>
-                </div>
-              </div>
-
-              <div class="document__item" onclick="window.open('#', '_blank')">
-                <div class="document__icon">🎓</div>
-                <div class="document__info">
-                  <h4 class="document__title">Diploma Certificate</h4>
-                  <p class="document__description">Cloud Computing Technology</p>
-                </div>
-              </div>
-
-              <div class="document__item" onclick="window.open('#', '_blank')">
-                <div class="document__icon">🏅</div>
-                <div class="document__info">
-                  <h4 class="document__title">Microsoft Certifications</h4>
-                  <p class="document__description">MS-900 & AZ-900 Certificates</p>
-                </div>
-              </div>
+            <div class="certification__card">
+              <div class="certification__icon">🌐</div>
+              <div class="certification__title">Cisco CCNA</div>
+              <div class="certification__status certification__status--completed">Certified 2009</div>
+            </div>
+            <div class="certification__card">
+              <div class="certification__icon">☁️</div>
+              <div class="certification__title">Microsoft Azure Fundamentals (AZ-900)</div>
+              <div class="certification__status">Expected 2025</div>
+            </div>
+            <div class="certification__card">
+              <div class="certification__icon">💼</div>
+              <div class="certification__title">Microsoft 365 Fundamentals (MS-900)</div>
+              <div class="certification__status">Expected 2025</div>
             </div>
           </div>
         </div>
@@ -517,41 +1421,39 @@
     </div>
   </section>
 
-  <section id="contact" class="contact main-section">
+  <section class="main-section contact" id="contact">
     <div class="main-container">
-      <h2 class="heading-secondary">
-        <span class="heading-secondary__sm"> Contact 📞</span>
-        <span class="heading-secondary__main">
-          Feel free to contact me for cloud engineering opportunities or collaboration
-        </span>
-      </h2>
-      <div class="main-section__content">
-        <div class="contact__form-cont">
-          <form class="contact__form">
-            <div class="contact__form-field">
-              <label for="name" class="contact__form-field-label">Name</label>
-              <input placeholder="Enter Your Name" type="text" class="contact__form-field-input" />
-            </div>
-            <div class="contact__form-field">
-              <label for="email" class="contact__form-field-label">Email</label>
-              <input placeholder="Enter Your Email" type="email" class="contact__form-field-input" />
-            </div>
-            <div class="contact__form-field">
-              <label for="message" class="contact__form-field-label">Message</label>
-              <textarea placeholder="Enter Your Message" name="message" id="message" cols="30" rows="10"
-                class="contact__form-field-input"></textarea>
-            </div>
-            <button type="submit" class="contact__form-submit">Submit</button>
-          </form>
-          <div class="contact__form-visual">
-            <div style="padding: 20px; background: #f8f9fa; border-radius: 8px; margin-top: 20px;">
-              <h4 style="margin-bottom: 15px; color: #333;">Get in Touch</h4>
-              <p style="margin-bottom: 10px;"><strong>Email:</strong> Shirin.javan@georgebrown.ca</p>
-              <p style="margin-bottom: 10px;"><strong>Phone:</strong> (647) 633-0330</p>
-              <p style="margin-bottom: 10px;"><strong>Location:</strong> Toronto, ON</p>
-              <p style="margin-bottom: 15px;"><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/shirinjavan-it" target="_blank">linkedin.com/in/shirinjavan-it</a></p>
-              <p style="margin-bottom: 15px;"><strong>GitHub:</strong> <a href="https://github.com/shirinjavan" target="_blank">github.com/shirinjavan</a></p>
-            </div>
+      <h2 class="heading-secondary">Let's Connect</h2>
+      <div class="section-divider"></div>
+      <p class="text-primary">
+        <span>Ready to discuss IT consulting opportunities or potential collaborations in cloud computing projects.</span>
+      </p>
+      <div class="main-section__content contact__form-cont">
+        <form class="contact__form">
+          <div class="contact__form-field">
+            <label class="contact__form-field-label" for="name">Name</label>
+            <input class="contact__form-field-input" type="text" id="name" placeholder="Your Full Name" />
+          </div>
+          <div class="contact__form-field">
+            <label class="contact__form-field-label" for="email">Email</label>
+            <input class="contact__form-field-input" type="email" id="email" placeholder="your.email@example.com" />
+          </div>
+          <div class="contact__form-field">
+            <label class="contact__form-field-label" for="message">Message</label>
+            <textarea class="contact__form-field-input" id="message" placeholder="Tell me about your project or inquiry..." rows="6"></textarea>
+          </div>
+          <button class="contact__form-submit" type="submit">Send Message</button>
+        </form>
+        <div class="contact__form-visual">
+          <div class="contact__info">
+            <h3>Get In Touch</h3>
+            <p><strong>📧 Email:</strong> rezasafari@gmail.com</p>
+            <p><strong>📱 Phone:</strong> (416) 555-1234</p>
+            <p><strong>📍 Location:</strong> Toronto, Ontario, Canada</p>
+            <p><strong>💼 LinkedIn:</strong> linkedin.com/in/rezasafari</p>
+            <p><strong>🔗 GitHub:</strong> github.com/rezasafari</p>
+            <br>
+            <p style="font-size: 1.4rem; opacity: 0.8;">Available for IT consulting, cloud migration projects, and system administration opportunities.</p>
           </div>
         </div>
       </div>
@@ -560,55 +1462,32 @@
 
   <footer class="main-footer">
     <div class="main-footer__upper">
-      <div class="main-container">
-        <ul  class="main-footer__links">
-          <li class="main-footer__link">
-            <a href="./index.html">Home</a>
-          </li>
-          <li class="main-footer__link">
-            <a href="./index.html#about">About</a>
-          </li>
-          <li class="main-footer__link">
-            <a href="./index.html#resume">Resume</a>
-          </li>
-          <li class="main-footer__link">
-            <a href="./index.html#projects">Work Samples</a>
-          </li>
-          <li class="main-footer__link">
-            <a href="./index.html#education">Education</a>
-          </li>
-          <li class="main-footer__link">
-            <a href="./index.html#contact">Contact</a>
-          </li>
-        </ul>
-        <div class="main-footer__mid-line"></div>
-        <div class="main-footer__socials">
-          <a href="https://github.com/shirinjavan" class="main-footer__social-link">
-            <img
-              src="https://d33wubrfki0l68.cloudfront.net/5557d5a11584d7201a38ee1a95200f57a4cc0f88/15085/assets/png/github-ico.png"
-              alt="GitHub" class="main-footer__social-link-icon" />
-          </a>
-          <a href="https://www.linkedin.com/in/shirinjavan-it" class="main-footer__social-link">
-            <img
-              src="https://d33wubrfki0l68.cloudfront.net/7f29579dde49e02480372aa49f7189c5536b0118/34b92/assets/png/linkedin-ico.png"
-              alt="LinkedIn" class="main-footer__social-link-icon" />
-          </a>
-        </div>
+      <div class="main-footer__links">
+        <div class="main-footer__link"><a href="#home">Home</a></div>
+        <div class="main-footer__link"><a href="#about">About</a></div>
+        <div class="main-footer__link"><a href="#resume">Resume</a></div>
+        <div class="main-footer__link"><a href="#work">Work</a></div>
+        <div class="main-footer__link"><a href="#education">Education</a></div>
+        <div class="main-footer__link"><a href="#contact">Contact</a></div>
+      </div>
+      <div class="main-footer__mid-line"></div>
+      <div class="main-footer__socials">
+        <a href="https://www.linkedin.com/in/reza-safari-034b581b8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="main-footer__social-link">
+          <img class="main-footer__social-link-icon" src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn" />
+        </a>
+        <a href="https://github.com/rezasafari" class="main-footer__social-link">
+          <img class="main-footer__social-link-icon" src="https://img.icons8.com/ios-filled/50/ffffff/github.png" alt="GitHub" />
+        </a>
       </div>
     </div>
     <div class="main-footer__bottom">
-      <div class="main-container">
-        <p class="main-footer__bottom-txt">
-          <a target="_blank" href="https://github.com/rammcodes/wowfolio">WowFolio</a> Open-Source Template
-          <script>document.write(new Date().getFullYear())</script>. Made by
-          <a target="_blank" href="https://rammaheshwari.com">Ram Maheshwari</a>
-        </p>
-      </div>
+      <p class="main-footer__bottom-txt">
+        © 2025 Reza Safari. Portfolio template refined by <a href="https://ifeoluwafaith-9e699.web.app/">Ifeoluwa Faith</a>
+      </p>
     </div>
   </footer>
 
   <script>
-    // Enhanced JavaScript with new functionality
     const smMenuBtn = document.querySelector('.main-header__sm-scr-nav-btn')
     const smMenu = document.querySelector('.main-header__sm-menu')
     const smMenuCloseBtn = document.querySelector('.main-header__sm-menu-close')
@@ -620,13 +1499,6 @@
     const smMenuLink4 = document.querySelector('.main-header__sm-menu-link--4')
     const smMenuLink5 = document.querySelector('.main-header__sm-menu-link--5')
     const smMenuLink6 = document.querySelector('.main-header__sm-menu-link--6')
-
-    // Smooth scroll function
-    function scrollToSection(sectionId) {
-      document.getElementById(sectionId).scrollIntoView({
-        behavior: 'smooth'
-      });
-    }
 
     smMenuBtn.addEventListener('click', () => {
       smMenu.style.transitionDelay = '0s'
@@ -652,7 +1524,7 @@
       smMenuLink5.style.transform = 'translateY(0)'
       smMenuLink5.style.opacity = '1'
 
-      smMenuLink6.style.transitionDelay = '1.0s'
+      smMenuLink6.style.transitionDelay = '1s'
       smMenuLink6.style.transform = 'translateY(0)'
       smMenuLink6.style.opacity = '1'
     })
@@ -663,34 +1535,32 @@
         smMenuLink6.style.transform = 'translateY(50px)'
         smMenuLink6.style.opacity = '0'
 
-        smMenuLink5.style.transitionDelay = '.1s'
+        smMenuLink5.style.transitionDelay = '.2s'
         smMenuLink5.style.transform = 'translateY(50px)'
         smMenuLink5.style.opacity = '0'
 
-        smMenuLink4.style.transitionDelay = '.2s'
+        smMenuLink4.style.transitionDelay = '.4s'
         smMenuLink4.style.transform = 'translateY(50px)'
         smMenuLink4.style.opacity = '0'
 
-        smMenuLink3.style.transitionDelay = '.3s'
+        smMenuLink3.style.transitionDelay = '.6s'
         smMenuLink3.style.transform = 'translateY(50px)'
         smMenuLink3.style.opacity = '0'
 
-        smMenuLink2.style.transitionDelay = '.4s'
+        smMenuLink2.style.transitionDelay = '.8s'
         smMenuLink2.style.transform = 'translateY(50px)'
         smMenuLink2.style.opacity = '0'
 
-        smMenuLink1.style.transitionDelay = '.5s'
+        smMenuLink1.style.transitionDelay = '1s'
         smMenuLink1.style.transform = 'translateY(50px)'
         smMenuLink1.style.opacity = '0'
 
-        smMenu.style.transitionDelay = '.8s'
+        smMenu.style.transitionDelay = '1.2s'
         smMenu.classList.remove('main-header__sm-menu--active')
 
         setTimeout(() => {
-          document.getElementById(ele.name).scrollIntoView({
-            behavior: 'smooth'
-          })
-        }, 900)
+          document.getElementById(ele.name).scrollIntoView()
+        }, 1300)
       })
     })
 
@@ -699,31 +1569,31 @@
       smMenuLink6.style.transform = 'translateY(50px)'
       smMenuLink6.style.opacity = '0'
 
-      smMenuLink5.style.transitionDelay = '.1s'
+      smMenuLink5.style.transitionDelay = '.2s'
       smMenuLink5.style.transform = 'translateY(50px)'
       smMenuLink5.style.opacity = '0'
 
-      smMenuLink4.style.transitionDelay = '.2s'
+      smMenuLink4.style.transitionDelay = '.4s'
       smMenuLink4.style.transform = 'translateY(50px)'
       smMenuLink4.style.opacity = '0'
 
-      smMenuLink3.style.transitionDelay = '.3s'
+      smMenuLink3.style.transitionDelay = '.6s'
       smMenuLink3.style.transform = 'translateY(50px)'
       smMenuLink3.style.opacity = '0'
 
-      smMenuLink2.style.transitionDelay = '.4s'
+      smMenuLink2.style.transitionDelay = '.8s'
       smMenuLink2.style.transform = 'translateY(50px)'
       smMenuLink2.style.opacity = '0'
 
-      smMenuLink1.style.transitionDelay = '.5s'
+      smMenuLink1.style.transitionDelay = '1s'
       smMenuLink1.style.transform = 'translateY(50px)'
       smMenuLink1.style.opacity = '0'
 
-      smMenu.style.transitionDelay = '.8s'
+      smMenu.style.transitionDelay = '1.2s'
       smMenu.classList.remove('main-header__sm-menu--active')
     })
 
-    // Theme color selector
+    // Theme Color Selector
     const themeColorSelector = document.querySelector('.themeClrSelector')
     const themeColorSelectorInput = document.querySelector('.themeClrSelector__input')
     const root = document.documentElement;
@@ -762,362 +1632,25 @@
       setDynamicColor(e.target.value)
     })
 
-    // Header logo click
-    const headerLogoConatiner = document.querySelector('.main-header__logo-container')
-    headerLogoConatiner.addEventListener('click', () => {
-      location.href = 'index.html'
+    // Header logo navigation
+    const headerLogoContainer = document.querySelector('.main-header__logo-container')
+    headerLogoContainer.addEventListener('click', () => {
+      document.getElementById('home').scrollIntoView()
     })
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
   </script>
-
-  <style>
-    /* Additional CSS for new sections */
-    
-    /* Resume Section Styles */
-    .resume {
-      background: rgba(248, 249, 250, 1);
-    }
-
-    .resume__content {
-      display: grid;
-      grid-template-columns: 1.5fr 1fr;
-      grid-gap: 6rem;
-      align-items: start;
-    }
-
-    .resume__preview-box {
-      background: #fff;
-      padding: 4rem;
-      border-radius: 10px;
-      box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
-      text-align: center;
-    }
-
-    .resume__preview-icon {
-      margin-bottom: 2rem;
-    }
-
-    .resume__buttons {
-      margin-top: 3rem;
-    }
-
-    .resume__buttons .btn {
-      margin: 0 1rem 1rem 0;
-    }
-
-    .resume__highlights {
-      padding: 2rem 0;
-    }
-
-    .resume__highlights-list {
-      list-style: none;
-      padding: 0;
-    }
-
-    .resume__highlight-item {
-      background: #fff;
-      padding: 2rem;
-      margin-bottom: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-      font-size: 1.6rem;
-      line-height: 1.6;
-    }
-
-    @media (max-width: 56.25em) {
-      .resume__content {
-        grid-template-columns: 1fr;
-        grid-gap: 4rem;
-      }
-    }
-
-    @media (max-width: 37.5em) {
-      .resume__preview-box {
-        padding: 3rem 2rem;
-      }
-      
-      .resume__buttons .btn {
-        width: 100%;
-        margin: 0 0 1rem 0;
-      }
-    }
-
-    /* Projects Button Improvements */
-    .projects__buttons {
-      display: flex;
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-    @media (max-width: 37.5em) {
-      .projects__buttons {
-        flex-direction: column;
-        gap: 1rem;
-      }
-      
-      .projects__buttons .btn {
-        width: 100%;
-      }
-    }
-
-    /* Education Section Styles */
-    .education {
-      background: rgba(252, 252, 252, 1);
-    }
-
-    .education__content {
-      display: grid;
-      grid-gap: 6rem;
-    }
-
-    .education__heading {
-      margin-bottom: 4rem;
-      color: rgba(var(--themeColor), 1);
-    }
-
-    .education__item {
-      background: #fff;
-      padding: 3rem;
-      border-radius: 10px;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-      margin-bottom: 3rem;
-    }
-
-    .education__item-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 1rem;
-    }
-
-    .education__degree {
-      font-size: 2.2rem;
-      color: #333;
-      font-weight: 600;
-    }
-
-    .education__year {
-      font-size: 1.6rem;
-      color: rgba(var(--themeColor), 1);
-      font-weight: 600;
-      background: rgba(var(--themeColor), 0.1);
-      padding: 0.5rem 1.5rem;
-      border-radius: 20px;
-    }
-
-    .education__institution {
-      font-size: 1.8rem;
-      color: #666;
-      font-weight: 600;
-      margin-bottom: 1.5rem;
-    }
-
-    .education__description {
-      font-size: 1.6rem;
-      color: #555;
-      line-height: 1.6;
-      margin-bottom: 2rem;
-    }
-
-    .education__coursework {
-      list-style: none;
-      padding: 0;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
-    }
-
-    .education__coursework li {
-      font-size: 1.5rem;
-      color: #666;
-      padding: 1rem;
-      background: #f8f9fa;
-      border-radius: 5px;
-      position: relative;
-      padding-left: 2.5rem;
-    }
-
-    .education__coursework li:before {
-      content: '✓';
-      position: absolute;
-      left: 1rem;
-      color: rgba(var(--themeColor), 1);
-      font-weight: bold;
-    }
-
-    /* Certifications Grid */
-    .certifications__grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 3rem;
-      margin-top: 2rem;
-    }
-
-    .certification__item {
-      background: #fff;
-      padding: 3rem;
-      border-radius: 10px;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .certification__item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    }
-
-    .certification__badge-img {
-      width: 8rem;
-      height: 8rem;
-      object-fit: contain;
-    }
-
-    .certification__title {
-      font-size: 1.8rem;
-      color: #333;
-      margin-bottom: 0.5rem;
-    }
-
-    .certification__code {
-      font-size: 1.4rem;
-      color: rgba(var(--themeColor), 1);
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
-
-    .certification__issuer {
-      font-size: 1.4rem;
-      color: #666;
-      margin-bottom: 1rem;
-    }
-
-    .certification__status {
-      background: rgba(40, 167, 69, 0.1);
-      color: #28a745;
-      padding: 0.5rem 1rem;
-      border-radius: 15px;
-      font-size: 1.2rem;
-      font-weight: 600;
-    }
-
-    /* Achievements List */
-    .achievements__list {
-      display: grid;
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-    .achievement__item {
-      background: #fff;
-      padding: 2.5rem;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-      display: flex;
-      align-items: flex-start;
-      gap: 2rem;
-    }
-
-    .achievement__icon {
-      font-size: 3rem;
-      flex-shrink: 0;
-    }
-
-    .achievement__title {
-      font-size: 1.8rem;
-      color: #333;
-      margin-bottom: 1rem;
-    }
-
-    .achievement__description {
-      font-size: 1.5rem;
-      color: #666;
-      line-height: 1.6;
-    }
-
-    /* Documents Grid */
-    .documents__grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-    .document__item {
-      background: #fff;
-      padding: 2.5rem;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-      cursor: pointer;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .document__item:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-    }
-
-    .document__icon {
-      font-size: 2.5rem;
-      flex-shrink: 0;
-    }
-
-    .document__title {
-      font-size: 1.6rem;
-      color: #333;
-      margin-bottom: 0.5rem;
-    }
-
-    .document__description {
-      font-size: 1.3rem;
-      color: #666;
-    }
-
-    /* Mobile Responsiveness */
-    @media (max-width: 56.25em) {
-      .education__coursework {
-        grid-template-columns: 1fr;
-      }
-      
-      .certifications__grid {
-        grid-template-columns: 1fr;
-      }
-      
-      .certification__item {
-        flex-direction: column;
-        text-align: center;
-      }
-      
-      .achievement__item {
-        flex-direction: column;
-        text-align: center;
-      }
-    }
-
-    @media (max-width: 37.5em) {
-      .education__item {
-        padding: 2rem;
-      }
-      
-      .education__item-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
-      }
-      
-      .documents__grid {
-        grid-template-columns: 1fr;
-      }
-      
-      .document__item {
-        padding: 2rem;
-      }
-    }
-  </style>
 </body>
-
 </html>
